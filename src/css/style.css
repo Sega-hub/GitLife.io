@@ -1859,6 +1859,7 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: #0c0c0a;
     width: 100%;
     height: 510px;
@@ -2011,6 +2012,7 @@ a {
   .container .main .team .team__container .team__card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 94.87%;
     margin: 0 10px;
     height: 510px;
