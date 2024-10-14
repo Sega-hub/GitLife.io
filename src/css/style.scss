@@ -769,6 +769,9 @@ letter-spacing: 0.03em;
                             height: auto;
                             border-bottom-right-radius: 20px;
                         }
+                        .methodology__push {
+                            display: none;
+                        }
                     }
                 }
                 &::after {
@@ -1567,7 +1570,7 @@ letter-spacing: 0.03em;
                 .advantages-title {
                     font-family: "Hauora";
                     font-size: 25px;
-                    font-weight: 700;
+                    font-weight: 500;
                     line-height: 25px;
                     text-align: left;
                     color: $COLOR_LIGHT_WHITE;
@@ -1595,9 +1598,10 @@ letter-spacing: 0.03em;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 1) 40% , rgb(8, 7, 56) 100%);
                 .hosting__container {
                     position: relative;
-                    width: $width;                
+                    width: 100%;                
                     max-width: none;
                     .hosting__title {
+                        padding: 0 30px;
                         max-width: 345px;
                         padding-top: 118px;
                         font-family: "Hauora";
@@ -1612,8 +1616,8 @@ letter-spacing: 0.03em;
                     }
     
                     .hosting__content {
-                        padding-top: 40px;
-                        width: 100%;
+                        padding: 40px 10px 0 10px;
+                        width: 94.87%;
                         @include center();
                         flex-direction: column;
                         .hosting__code {                        
@@ -1746,9 +1750,10 @@ letter-spacing: 0.03em;
                 .team__container {                
                     padding-top: 266px;
                     position: relative;
-                    width: $width;
+                    width: 100%;
                     max-width: none;
                     .team__title {
+                        padding: 0 30px;
                         font-family: "Hauora";
                         font-size: 25px;
                         font-weight: 500;
@@ -1757,7 +1762,7 @@ letter-spacing: 0.03em;
                         color: rgba(68, 63, 219, 1);
                     }
                     .team__slogan {  
-                        padding-top: 20px;
+                        padding: 20px 30px 0 30px;                        
                         font-family: "Hauora";
                         font-size: 16px;
                         font-weight: 500;
@@ -1766,6 +1771,10 @@ letter-spacing: 0.03em;
                         color: $COLOR_WHITE;
                     }
                     .team__card {
+                        display: flex;
+                        flex-direction: column;
+                        width: 94.87%;
+                        margin: 0 10px;
                         height: 510px;
                         margin-top: 40px;
                         border-radius: 20px;
@@ -1806,14 +1815,16 @@ letter-spacing: 0.03em;
                         display: flex;
                         flex-direction: column-reverse;
                         .team__discription-text {                         
-                            padding-top: 60px;   
-                            padding-left: 0;
+                            padding: 60px 30px 0 30px;
                             font-family: "Hauora";
                             font-size: $FONT_SIZE_16;
                             font-weight: 500;
                             line-height: 20.8px;
                             text-align: left;
                             color: $COLOR_WHITE;
+                            br {
+                                display: none;
+                            }
                             span {
                                 color: $COLOR_GRAY;
                             }
@@ -1825,7 +1836,7 @@ letter-spacing: 0.03em;
                                 width: 254px;
                                 height: 244px;
                                 margin-top: -138px;
-                                margin-right: 2px;
+                                margin-right: 10px;
                                 z-index: 1;
                             }
                         }
@@ -1922,11 +1933,12 @@ letter-spacing: 0.03em;
                     .methodology__connection {
                         display: flex;
                         flex-direction: column;
+                        justify-content: space-between;
                         margin-top: 24px;
                         width: 100%;
                         height: 510px;
                         border-radius: 20px;
-                        border: 1px solid rgba(73, 73, 73, 1);
+                        border: 1px solid rgb(73, 73, 73);
                         background-color: #050505;
                         .methodology__connection__discription {
                            
@@ -1943,14 +1955,24 @@ letter-spacing: 0.03em;
                             }
                         }
                         .methodology__connection__img {
+                            position: relative;
                             width: 100%;
                             display: flex;
                             justify-content: end;
                             img {
-                                width: 93.03%;
+                                width: 100%;
                                 height: auto;
                                 border-bottom-right-radius: 20px;
-                            }                          
+                                border-bottom-left-radius: 20px;
+                            } 
+                            .methodology__push {
+                                display: flex;
+                                z-index: 10;
+                                position: absolute;
+                                width: 275px;
+                                height: 227px;
+                                top: 76%;
+                            }                         
                         }
                     }
                     &::after {
@@ -2069,11 +2091,12 @@ letter-spacing: 0.03em;
                 @include center();
                 .cases__container {
                     position: relative;
-                    width: $width;
+                    width: 100%;
                     max-width: none;
                     display: flex;
                     flex-direction: column;
                     .cases__title {
+                        padding: 0 30px;
                         font-family: "Hauora";
                         font-size: 25px;
                         font-weight: 500;
@@ -2082,6 +2105,7 @@ letter-spacing: 0.03em;
                         color: rgba(68, 63, 219, 1);                    
                     }
                     .cases__slogan {
+                        padding: 0 30px;
                         margin-top: 20px;
                         font-family: "Hauora";
                         font-size: 16px;
@@ -2091,8 +2115,8 @@ letter-spacing: 0.03em;
                         color: $COLOR_WHITE;
                     }
                     .cases__box {
-                        padding-top: 40px;
-                        width: 100%;
+                        padding: 40px 10px 0 10px;
+                        width: 94.85%;
                         display: flex;  
                         flex-direction: column;                  
                         gap: 20px;

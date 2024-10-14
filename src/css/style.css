@@ -887,6 +887,9 @@ a {
   height: auto;
   border-bottom-right-radius: 20px;
 }
+.container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__push {
+  display: none;
+}
 .container .main .methodology .methodology__container::after {
   content: "";
   position: absolute;
@@ -1788,7 +1791,7 @@ a {
   .container .main .advantages .advantages-title {
     font-family: "Hauora";
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 25px;
     text-align: left;
     color: rgb(240, 246, 252);
@@ -1818,10 +1821,11 @@ a {
   }
   .container .main .hosting .hosting__container {
     position: relative;
-    width: 92.3%;
+    width: 100%;
     max-width: none;
   }
   .container .main .hosting .hosting__container .hosting__title {
+    padding: 0 30px;
     max-width: 345px;
     padding-top: 118px;
     font-family: "Hauora";
@@ -1835,8 +1839,8 @@ a {
     color: rgb(68, 63, 219);
   }
   .container .main .hosting .hosting__container .hosting__content {
-    padding-top: 40px;
-    width: 100%;
+    padding: 40px 10px 0 10px;
+    width: 94.87%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1968,10 +1972,11 @@ a {
   .container .main .team .team__container {
     padding-top: 266px;
     position: relative;
-    width: 92.3%;
+    width: 100%;
     max-width: none;
   }
   .container .main .team .team__container .team__title {
+    padding: 0 30px;
     font-family: "Hauora";
     font-size: 25px;
     font-weight: 500;
@@ -1980,7 +1985,7 @@ a {
     color: rgb(68, 63, 219);
   }
   .container .main .team .team__container .team__slogan {
-    padding-top: 20px;
+    padding: 20px 30px 0 30px;
     font-family: "Hauora";
     font-size: 16px;
     font-weight: 500;
@@ -1989,6 +1994,10 @@ a {
     color: rgb(255, 255, 255);
   }
   .container .main .team .team__container .team__card {
+    display: flex;
+    flex-direction: column;
+    width: 94.87%;
+    margin: 0 10px;
     height: 510px;
     margin-top: 40px;
     border-radius: 20px;
@@ -2031,14 +2040,16 @@ a {
     flex-direction: column-reverse;
   }
   .container .main .team .team__container .team__discription .team__discription-text {
-    padding-top: 60px;
-    padding-left: 0;
+    padding: 60px 30px 0 30px;
     font-family: "Hauora";
     font-size: 16px;
     font-weight: 500;
     line-height: 20.8px;
     text-align: left;
     color: rgb(255, 255, 255);
+  }
+  .container .main .team .team__container .team__discription .team__discription-text br {
+    display: none;
   }
   .container .main .team .team__container .team__discription .team__discription-text span {
     color: rgb(112, 111, 146);
@@ -2051,7 +2062,7 @@ a {
     width: 254px;
     height: 244px;
     margin-top: -138px;
-    margin-right: 2px;
+    margin-right: 10px;
     z-index: 1;
   }
   .container .main .team .team__container::after {
@@ -2185,6 +2196,7 @@ a {
   .container .main .methodology .methodology__container .methodology__connection {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-top: 24px;
     width: 100%;
     height: 510px;
@@ -2206,14 +2218,24 @@ a {
     color: rgb(112, 111, 146);
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: end;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img img {
-    width: 93.03%;
+    width: 100%;
     height: auto;
     border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__push {
+    display: flex;
+    z-index: 10;
+    position: absolute;
+    width: 275px;
+    height: 227px;
+    top: 76%;
   }
   .container .main .methodology .methodology__container::after {
     content: "";
@@ -2341,12 +2363,13 @@ a {
   }
   .container .main .cases .cases__container {
     position: relative;
-    width: 92.3%;
+    width: 100%;
     max-width: none;
     display: flex;
     flex-direction: column;
   }
   .container .main .cases .cases__container .cases__title {
+    padding: 0 30px;
     font-family: "Hauora";
     font-size: 25px;
     font-weight: 500;
@@ -2355,6 +2378,7 @@ a {
     color: rgb(68, 63, 219);
   }
   .container .main .cases .cases__container .cases__slogan {
+    padding: 0 30px;
     margin-top: 20px;
     font-family: "Hauora";
     font-size: 16px;
@@ -2364,8 +2388,8 @@ a {
     color: rgb(255, 255, 255);
   }
   .container .main .cases .cases__container .cases__box {
-    padding-top: 40px;
-    width: 100%;
+    padding: 40px 10px 0 10px;
+    width: 94.85%;
     display: flex;
     flex-direction: column;
     gap: 20px;
