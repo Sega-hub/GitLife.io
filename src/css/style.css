@@ -544,6 +544,9 @@ a {
   justify-content: center;
   width: 100%;
 }
+.container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__mini {
+  display: none;
+}
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images img {
   width: 100%;
   height: auto;
@@ -694,6 +697,9 @@ a {
   padding-top: 115px;
   display: flex;
   justify-content: end;
+}
+.container .main .team .team__container .team__card .team__card__img .team__img__mini {
+  display: none;
 }
 .container .main .team .team__container .team__card .team__card__img img {
   width: 94.1%;
@@ -886,6 +892,9 @@ a {
   width: 93.03%;
   height: auto;
   border-bottom-right-radius: 20px;
+}
+.container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__img__mini {
+  display: none;
 }
 .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__push {
   display: none;
@@ -1876,6 +1885,12 @@ a {
     width: 100%;
     padding-top: 46px;
   }
+  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__big {
+    display: none;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__mini {
+    display: flex;
+  }
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images img {
     width: 100%;
     height: 306px;
@@ -2024,6 +2039,12 @@ a {
     padding-top: 0;
     display: flex;
     justify-content: end;
+  }
+  .container .main .team .team__container .team__card .team__card__img .team__img__big {
+    display: none;
+  }
+  .container .main .team .team__container .team__card .team__card__img .team__img__mini {
+    display: flex;
   }
   .container .main .team .team__container .team__card .team__card__img img {
     padding-top: 102px;
@@ -2222,6 +2243,12 @@ a {
     width: 100%;
     display: flex;
     justify-content: end;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__img__big {
+    display: none;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__img__mini {
+    display: flex;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img img {
     width: 100%;

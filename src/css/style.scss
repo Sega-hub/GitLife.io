@@ -502,7 +502,10 @@ letter-spacing: 0.03em;
                         .hosting__code__images {
                             display: flex;   
                             justify-content: center;   
-                            width: 100%;               
+                            width: 100%; 
+                            .hosting__img__mini {
+                                display: none;
+                            }              
                            img {
                                 width: 100%;
                                 height: auto;
@@ -616,6 +619,9 @@ letter-spacing: 0.03em;
                         padding-top: 115px;
                         display: flex;
                         justify-content: end;
+                        .team__img__mini{
+                            display: none;
+                        }
                         img {
                             width: 94.10%;
                             height: auto;
@@ -768,6 +774,9 @@ letter-spacing: 0.03em;
                             width: 93.03%;
                             height: auto;
                             border-bottom-right-radius: 20px;
+                        }
+                        .methodology__img__mini {
+                            display: none;
                         }
                         .methodology__push {
                             display: none;
@@ -1648,7 +1657,13 @@ letter-spacing: 0.03em;
                                 justify-content: center;   
                                 width: 100%;  
                                  
-                                padding-top: 46px;                  
+                                padding-top: 46px;   
+                                .hosting__img__big {
+                                    display: none;
+                                }       
+                                .hosting__img__mini {
+                                    display: flex;
+                                }        
                                img {
                                     width: 100%;
                                     height: 306px;
@@ -1800,6 +1815,12 @@ letter-spacing: 0.03em;
                             padding-top: 0;
                             display: flex;
                             justify-content: end;
+                            .team__img__big{
+                                display: none;
+                            }
+                            .team__img__mini{
+                                display: flex;
+                            }
                             img {       
                                 padding-top: 102px;                       
                                 width: 100%;
@@ -1959,6 +1980,12 @@ letter-spacing: 0.03em;
                             width: 100%;
                             display: flex;
                             justify-content: end;
+                            .methodology__img__big {
+                                display: none;
+                            }
+                            .methodology__img__mini {
+                                display: flex;
+                            }
                             img {
                                 width: 100%;
                                 height: auto;
