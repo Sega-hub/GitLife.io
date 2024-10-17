@@ -1612,8 +1612,9 @@ letter-spacing: 0.03em;
                 }
             }
             .advantages {               
-                width: $width;
-                align-items: start;
+                width: 100%;
+                @include center();
+                flex-direction: column;
                 padding: 280px 0;
                 .advantages__video {
                     position: absolute;
@@ -1626,6 +1627,9 @@ letter-spacing: 0.03em;
                     z-index: -1;
                 }   
                 .advantages-title {
+                    width: $width;
+                    display: flex;
+                    justify-content: start;
                     font-family: "Hauora";
                     font-size: 25px;
                     font-weight: 500;
@@ -1637,7 +1641,7 @@ letter-spacing: 0.03em;
                     br {
                         display: none;
                     }
-                    max-width: 390px;
+                    width: $width;
                     margin-top: 30px;
                     font-family: "Hauora";
                     font-size: $FONT_SIZE_16;
