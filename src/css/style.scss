@@ -148,6 +148,7 @@ $width: 80%;
 }
 
 .effect {
+    scale: 0;
     opacity: 1;
     position: absolute;
     box-sizing: border-box;
@@ -578,11 +579,17 @@ letter-spacing: 0.03em;
                     content: "";
                     position: absolute;
                     left: 33px;
-                    width: 793px;
-                    height: 271px;
+                    width: 0;
+                    height: 0;
                     background-image: url("../../public/images/LineHosting.png");
                     background-repeat: no-repeat;
                     background-size: 793px 271px;
+                    transition: all 1s ease 0s;
+                }
+
+                &.anim.play::after{
+                    width: 793px;
+                    height: 271px;
                 }
             }
         }
@@ -675,7 +682,7 @@ letter-spacing: 0.03em;
                             height: 283px;
                             margin-top: -138px;
                             margin-right: 2px;
-                            z-index: 1;
+                            z-index: 10;
                         }
                     }
                     
@@ -685,11 +692,16 @@ letter-spacing: 0.03em;
                     position: absolute;
                     left: 24px;
                     top: 1156px;
-                    width: 926px;
-                    height: 490px;
+                    width: 0;
+                    height: 0;
                     background-image: url("../../public/images/teamLine.png");
                     background-repeat: no-repeat;
                     background-size: 926px 490px;
+                    transition: all 1s ease 0s;
+                }
+                &.anim.play::after{
+                    width: 926px;
+                    height: 490px;
                 }
             }
         }
@@ -809,11 +821,16 @@ letter-spacing: 0.03em;
                     content: "";
                     position: absolute;
                     left: 25%;
-                    width: 560px;
-                    height: 222px;
+                    width: 0;
+                    height: 0;
                     background-image: url("../../public/images/methodologyLine.png");
                     background-repeat: no-repeat;
                     background-size: 560px 222px;
+                    transition: all 1s ease 0s;
+                }
+                &.anim.play::after{
+                    width: 560px;
+                    height: 222px;
                 }
             }           
         }
@@ -1117,12 +1134,17 @@ letter-spacing: 0.03em;
                     position: absolute;
                     top: 1379px;
                     left: 21px;
-                    width: 809px;
-                    height: 243px;
+                    width: 0;
+                    height: 0;
                     background-image: url(../../public/images/inviteLine.png);
                     background-repeat: no-repeat;
                     background-size: 809px 243px;
                     z-index: 1;
+                    transition: all 1s ease 0s;
+                }
+                &.anim.play::after{
+                    width: 809px;
+                    height: 243px;
                 }
             }
         }

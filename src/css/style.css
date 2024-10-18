@@ -21,6 +21,7 @@ a {
 }
 
 .effect {
+  scale: 0;
   opacity: 1;
   position: absolute;
   box-sizing: border-box;
@@ -653,11 +654,16 @@ a {
   content: "";
   position: absolute;
   left: 33px;
-  width: 793px;
-  height: 271px;
+  width: 0;
+  height: 0;
   background-image: url("../../public/images/LineHosting.png");
   background-repeat: no-repeat;
   background-size: 793px 271px;
+  transition: all 1s ease 0s;
+}
+.container .main .hosting .hosting__container.anim.play::after {
+  width: 793px;
+  height: 271px;
 }
 .container .main .team {
   background: linear-gradient(180deg, rgb(8, 7, 56) 40%, rgb(5, 4, 30) 100%);
@@ -754,18 +760,23 @@ a {
   height: 283px;
   margin-top: -138px;
   margin-right: 2px;
-  z-index: 1;
+  z-index: 10;
 }
 .container .main .team .team__container::after {
   content: "";
   position: absolute;
   left: 24px;
   top: 1156px;
-  width: 926px;
-  height: 490px;
+  width: 0;
+  height: 0;
   background-image: url("../../public/images/teamLine.png");
   background-repeat: no-repeat;
   background-size: 926px 490px;
+  transition: all 1s ease 0s;
+}
+.container .main .team .team__container.anim.play::after {
+  width: 926px;
+  height: 490px;
 }
 .container .main .methodology {
   padding-top: 374px;
@@ -925,11 +936,16 @@ a {
   content: "";
   position: absolute;
   left: 25%;
-  width: 560px;
-  height: 222px;
+  width: 0;
+  height: 0;
   background-image: url("../../public/images/methodologyLine.png");
   background-repeat: no-repeat;
   background-size: 560px 222px;
+  transition: all 1s ease 0s;
+}
+.container .main .methodology .methodology__container.anim.play::after {
+  width: 560px;
+  height: 222px;
 }
 .container .main .possibilities {
   background-color: rgb(4, 4, 6);
@@ -1297,12 +1313,17 @@ a {
   position: absolute;
   top: 1379px;
   left: 21px;
-  width: 809px;
-  height: 243px;
+  width: 0;
+  height: 0;
   background-image: url(../../public/images/inviteLine.png);
   background-repeat: no-repeat;
   background-size: 809px 243px;
   z-index: 1;
+  transition: all 1s ease 0s;
+}
+.container .main .cases .cases__container.anim.play::after {
+  width: 809px;
+  height: 243px;
 }
 .container .main .invitation {
   background: linear-gradient(180deg, rgb(3, 3, 22), rgb(6, 5, 34));
