@@ -1543,6 +1543,9 @@ a {
 }
 
 @media (max-width: 500px) {
+  .play {
+    display: none !important;
+  }
   .effect {
     display: none;
   }
@@ -1569,7 +1572,7 @@ a {
     background-color: rgb(5, 5, 33);
   }
   .container .header .header__container {
-    width: 92.3%;
+    width: 84.61%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1623,7 +1626,7 @@ a {
   }
   .container .main .offer .offer__video {
     position: absolute;
-    top: -48px;
+    top: -30px;
     left: 0;
     width: 100%;
     height: 50%;
@@ -1633,7 +1636,7 @@ a {
   }
   .container .main .offer .offer__container {
     padding-top: 0;
-    width: 92.3%;
+    width: 84.61%;
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -1705,7 +1708,7 @@ a {
     box-shadow: none;
   }
   .container .main .offer .offer__container .offer__search .form .offer__search__input {
-    width: 96.45%;
+    width: 95.8%;
     height: 42px;
     border-radius: 10px;
     padding-left: 0;
@@ -1733,7 +1736,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 25px 0;
   }
   .container .main .offer .offer__container .offer__partners img {
     display: block;
@@ -1776,7 +1779,7 @@ a {
   }
   .container .main .openspace .openspace__container {
     max-width: none;
-    width: 92.3%;
+    width: 84.61%;
     align-items: start;
   }
   .container .main .openspace .openspace__container .openspace__title {
@@ -1846,6 +1849,8 @@ a {
     line-height: 16px;
     text-align: left;
     color: rgb(255, 255, 255);
+    min-width: 0;
+    max-width: 150px;
   }
   .container .main .openspace .openspace__container .openspace__variation .openspace__cursor {
     display: none;
@@ -1869,7 +1874,7 @@ a {
     z-index: -1;
   }
   .container .main .advantages .advantages-title {
-    width: 92.3%;
+    width: 84.61%;
     display: flex;
     justify-content: start;
     font-family: "Hauora";
@@ -1880,7 +1885,7 @@ a {
     color: rgb(240, 246, 252);
   }
   .container .main .advantages .advantages-discription {
-    width: 92.3%;
+    width: 84.61%;
     margin-top: 30px;
     font-family: "Hauora";
     font-size: 16px;
@@ -2046,7 +2051,8 @@ a {
   .container .main .hosting .hosting__container::after {
     content: "";
     position: absolute;
-    left: 34px;
+    left: 62px;
+    top: 1840px;
     width: 3px;
     height: 246px;
     background-image: url(../../public/images/mobLine.png);
@@ -2061,7 +2067,7 @@ a {
     align-items: center;
   }
   .container .main .team .team__container {
-    padding-top: 266px;
+    padding-top: 225px;
     position: relative;
     width: 100%;
     max-width: none;
@@ -2161,21 +2167,22 @@ a {
     height: 244px;
     margin-top: -138px;
     margin-right: 10px;
-    z-index: 1;
+    z-index: 10;
   }
   .container .main .team .team__container::after {
     content: "";
     display: flex;
     position: absolute;
-    left: 34px;
+    top: 1090px;
+    left: 62px;
     width: 3px;
     height: 214px;
-    background-image: url("../../public/images/mobLine.png");
+    background-image: url(../../public/images/mobLine.png);
     background-repeat: no-repeat;
     background-size: 3px 214px;
   }
   .container .main .methodology {
-    padding-top: 230px;
+    padding-top: 200px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -2183,11 +2190,16 @@ a {
     background: linear-gradient(180deg, rgb(5, 4, 30), rgb(4, 4, 6) 100%);
   }
   .container .main .methodology .methodology__container {
-    width: 92.3%;
+    width: 100%;
     position: relative;
     max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .container .main .methodology .methodology__container .methodology__title {
+    width: 84.61%;
     font-family: "Hauora";
     font-size: 25px;
     font-weight: 500;
@@ -2199,6 +2211,7 @@ a {
     color: rgb(68, 63, 219);
   }
   .container .main .methodology .methodology__container .methodology__slogan {
+    width: 84.61%;
     padding-top: 20px;
     font-family: "Hauora";
     font-size: 16px;
@@ -2216,6 +2229,7 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0 24px;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum {
@@ -2226,7 +2240,9 @@ a {
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
     padding-bottom: 1px;
+    width: 94.87%;
     height: 510px;
+    padding-bottom: 0;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p {
     max-width: 322px;
@@ -2263,7 +2279,9 @@ a {
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
     padding-bottom: 1px;
+    width: 94.87%;
     height: 510px;
+    padding-bottom: 0;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p {
     max-width: 322px;
@@ -2296,7 +2314,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 24px;
-    width: 100%;
+    width: 94.87%;
     height: 510px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
@@ -2344,10 +2362,11 @@ a {
   .container .main .methodology .methodology__container::after {
     content: "";
     position: absolute;
-    left: 34px;
+    left: 62px;
+    top: 1770px;
     width: 3px;
     height: 267px;
-    background-image: url("../../public/images/mobLine.png");
+    background-image: url(../../public/images/mobLine.png);
     background-repeat: no-repeat;
     background-size: 3px 267px;
   }
@@ -2360,7 +2379,7 @@ a {
     align-items: center;
   }
   .container .main .possibilities .possibilities__container {
-    width: 92.3%;
+    width: 84.61%;
     position: relative;
     align-items: start;
   }
@@ -2449,7 +2468,7 @@ a {
   .container .main .possibilities .possibilities__container::after {
     content: "";
     position: absolute;
-    left: 34px;
+    left: 33px;
     top: 215px;
     width: 3px;
     height: 267px;
@@ -2726,7 +2745,7 @@ a {
   .container .main .cases .cases__container::after {
     content: "";
     position: absolute;
-    left: 34px;
+    left: 62px;
     top: 2215px;
     width: 3px;
     height: 198px;
@@ -2743,7 +2762,7 @@ a {
     align-items: center;
   }
   .container .main .invitation .invitation__container {
-    width: 92.3%;
+    width: 84.61%;
     max-width: none;
     display: flex;
     flex-direction: column;
@@ -2838,7 +2857,7 @@ a {
     align-items: center;
   }
   .container .footer .footer__container {
-    width: 92.3%;
+    width: 84.61%;
     max-width: none;
     display: flex;
     flex-direction: column;

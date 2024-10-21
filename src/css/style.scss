@@ -1319,6 +1319,10 @@ letter-spacing: 0.03em;
 
 @media (max-width: 500px) {
 
+    .play {
+        display: none !important;
+    }
+
     .effect {
         display: none;
     }
@@ -1358,7 +1362,7 @@ letter-spacing: 0.03em;
         display: flex;
     }
 
-    $width: 92.30%;
+    $width: 84.61%;
     .container {
         display: block;
         margin: auto;
@@ -1405,7 +1409,7 @@ letter-spacing: 0.03em;
                 background: linear-gradient(180deg, rgba(10, 9, 67, 0.5), rgb(0, 0, 0) 100%);
                 .offer__video {
                     position: absolute;
-                    top: -48px;
+                    top: -30px;
                     left: 0;
                     width: 100%;
                     height: 50%;
@@ -1484,10 +1488,10 @@ letter-spacing: 0.03em;
                                 box-shadow: none;
                             }
                             .offer__search__input {
-                                width: 96.45%;
+                                width: 95.8%;
                                 height: 42px;
                                 border-radius: 10px;
-                                padding-left: 0; // Убираем общий отступ для инпута
+                                padding-left: 0; 
                                 &[type="text"] {
                                   padding-left: 15px; // Оставляем отступ только для текста
                                 }
@@ -1514,7 +1518,7 @@ letter-spacing: 0.03em;
                         flex-wrap: wrap;
                         justify-content: center; 
                         align-items: center;
-                        gap: 20px;                       
+                        gap: 25px 0;                     
                         img {
                             display: block;
                             margin: auto;
@@ -1598,7 +1602,7 @@ letter-spacing: 0.03em;
                         .openspace__categories {
                             display: flex;
                             flex-direction: column;
-                            padding-top: 0; 
+                            padding-top: 0;                            
                             gap: 36px;
                             &:nth-child(3) {
                                 .openspace__categories-item {
@@ -1627,6 +1631,8 @@ letter-spacing: 0.03em;
                                 line-height: 16px;
                                 text-align: left;
                                 color: $COLOR_WHITE;
+                                min-width: 0;
+                                max-width: 150px;
                             }
                         }
                         .openspace__cursor {
@@ -1827,7 +1833,8 @@ letter-spacing: 0.03em;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 34px;
+                        left: 62px;
+                        top: 1840px;
                         width: 3px;
                         height: 246px;
                         background-image: url(../../public/images/mobLine.png);
@@ -1841,7 +1848,7 @@ letter-spacing: 0.03em;
                 width: 100%;
                 @include center();
                 .team__container {                
-                    padding-top: 266px;
+                    padding-top: 225px;
                     position: relative;
                     width: 100%;
                     max-width: none;
@@ -1937,7 +1944,7 @@ letter-spacing: 0.03em;
                                 height: 244px;
                                 margin-top: -138px;
                                 margin-right: 10px;
-                                z-index: 1;
+                                z-index: 10;
                             }
                         }
                         
@@ -1946,25 +1953,29 @@ letter-spacing: 0.03em;
                         content: "";
                         display: flex;
                         position: absolute;
-                        left: 34px;
+                        top: 1090px;
+                        left: 62px;
                         width: 3px;
                         height: 214px;
-                        background-image: url("../../public/images/mobLine.png");
+                        background-image: url(../../public/images/mobLine.png);
                         background-repeat: no-repeat;
                         background-size: 3px 214px;
                     }
                 }
             }
             .methodology {
-                padding-top: 230px;
+                padding-top: 200px;
                 width: 100%;
                 @include center();
                 background: linear-gradient(180deg, rgb(5, 4, 30), rgb(4, 4, 6) 100%);
                 .methodology__container {
-                    width: $width;
+                    width: 100%;
                     position: relative;
                     max-width: none;
+                    @include center();
+                    flex-direction: column;
                     .methodology__title {
+                        width: $width;
                         font-family: "Hauora";
                         font-size: 25px;
                         font-weight: 500;
@@ -1976,6 +1987,7 @@ letter-spacing: 0.03em;
                         }
                     }
                     .methodology__slogan {
+                        width: $width;
                         padding-top: 20px;
                         font-family: "Hauora";
                         font-size: 16px;
@@ -1993,10 +2005,13 @@ letter-spacing: 0.03em;
                         width: 100%;
                         display: flex;
                         flex-direction: column;
+                        align-items: center;
                         gap: 0 24px;
                         .methodology__grid__scrum {
                             @include card();
+                            width: 94.87%;
                             height: 510px;
+                            padding-bottom: 0;
                             .methodology__img {
                                 display: flex;
                                 justify-content: end;
@@ -2014,7 +2029,9 @@ letter-spacing: 0.03em;
                         .methodology__grid__kanban {
                             margin-top: 20px;
                             @include card();
+                            width: 94.87%;
                             height: 510px;
+                            padding-bottom: 0;
                             .methodology__img {
                                 display: flex;
                                 justify-content: end;
@@ -2035,7 +2052,7 @@ letter-spacing: 0.03em;
                         flex-direction: column;
                         justify-content: space-between;
                         margin-top: 24px;
-                        width: 100%;
+                        width: 94.87%;
                         height: 510px;
                         border-radius: 20px;
                         border: 1px solid rgb(73, 73, 73);
@@ -2084,10 +2101,11 @@ letter-spacing: 0.03em;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 34px;
+                        left: 62px;
+                        top: 1770px;
                         width: 3px;
                         height: 267px;
-                        background-image: url("../../public/images/mobLine.png");
+                        background-image: url(../../public/images/mobLine.png);
                         background-repeat: no-repeat;
                         background-size: 3px 267px;
                     }
@@ -2180,7 +2198,7 @@ letter-spacing: 0.03em;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 34px;
+                        left: 33px;
                         top: 215px;
                         width: 3px;
                         height: 267px;
@@ -2461,7 +2479,7 @@ letter-spacing: 0.03em;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 34px;
+                        left: 62px;
                         top: 2215px;
                         width: 3px;
                         height: 198px;
