@@ -500,7 +500,7 @@ letter-spacing: 0.03em;
                         width: 100%;
                         max-height: 600px;
                         border-radius: 20px;
-                        padding-bottom: 3px;
+                        padding-bottom: 1px;
                         border: 1px solid $COLOR_DARK_GRAY;
                         .hosting__code__discription {
                             padding: 80px 0 0 95px;
@@ -541,7 +541,7 @@ letter-spacing: 0.03em;
                         gap: 0 24px;
                        .hosting__grid__branch {
                             @include card();                           
-                           
+                            padding-bottom: 0;
                             .hosting__img {
                                 display: flex;
                                 justify-content: end;
@@ -557,8 +557,8 @@ letter-spacing: 0.03em;
                             }
                        }
                        .hosting__grid__manage {
-                            @include card();                           
-                           
+                            @include card();                         
+                            padding-bottom: 0;
                             .hosting__img {
                                 display: flex;
                                 justify-content: end;
