@@ -151,11 +151,10 @@ $width: 80%;
     scale: 0;
     opacity: 1;
     position: absolute;
-    box-sizing: border-box;
-    z-index: 5;
+    z-index: 100;
     background-color: rgba(4, 0, 110, 0.5);
-    width: 280px;
-    height: 280px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     filter: blur(80px);
     transition:  0.1s ease;
@@ -532,6 +531,7 @@ letter-spacing: 0.03em;
                            }
 
                         }
+                        
                     }
                     .hosting__grid {
                         padding-top: 24px;
@@ -548,12 +548,19 @@ letter-spacing: 0.03em;
                                 width: 100%;
                                 z-index: 10;
                                 padding-top: 0px;
-                               img {
+                                translate: 70px;
+                                opacity: 0;
+                                transition: 1s ease;
+                                &.enter {
+                                    translate: 0;
+                                    opacity: 1;
+                                }
+                                img {
                                     width: 88.13%;
                                     height: auto;
                                     border-bottom-right-radius: 20px;
                                     object-fit: cover
-                               }
+                                }
                             }
                        }
                        .hosting__grid__manage {
@@ -563,8 +570,15 @@ letter-spacing: 0.03em;
                                 display: flex;
                                 justify-content: end;
                                 width: 100%;
-                                padding-top: 0px;
+                                padding-top: 59px;
                                 z-index: 10;
+                                translate: 70px;
+                                opacity: 0;
+                                transition: 1s ease;
+                                &.enter {
+                                    translate: 0;
+                                    opacity: 1;
+                                }
                                img {
                                     width: 88.13%;
                                     height: auto;
@@ -580,16 +594,15 @@ letter-spacing: 0.03em;
                     content: "";
                     position: absolute;
                     left: 33px;
-                    width: 0;
+                    width: 793px;
                     height: 0;
                     background-image: url("../../public/images/LineHosting.png");
                     background-repeat: no-repeat;
                     background-size: 793px 271px;
-                    transition: all 1s ease 0s;
+                    transition: all 1.5s ease 0s;
                 }
 
-                &.anim.play::after{
-                    width: 793px;
+                &.anim.play::after{                   
                     height: 271px;
                 }
             }
@@ -691,23 +704,22 @@ letter-spacing: 0.03em;
                 &::after {
                     content: "";
                     position: absolute;
-                    left: 24px;
-                    top: 1280px;
-                    width: 0;
+                    left: 34px;
+                    top: 1070px;
+                    width: 926px;
                     height: 0;
                     background-image: url("../../public/images/teamLine.png");
                     background-repeat: no-repeat;
                     background-size: 926px 490px;
-                    transition: all 1s ease 0s;
+                    transition: all 1.5s ease 0s;
                 }
-                &.anim.play::after{
-                    width: 926px;
+                &.anim.play::after{                    
                     height: 490px;
                 }
             }
         }
         .methodology {
-            padding-top: 490px;
+            padding-top: 300px;
             width: 100%;
             @include center();
             background: linear-gradient(180deg, rgb(5, 4, 30), rgb(4, 4, 6) 100%);
@@ -745,11 +757,19 @@ letter-spacing: 0.03em;
                     gap: 0 24px;
                     .methodology__grid__scrum {
                         @include card();
+                        padding-bottom: 0;
                         .methodology__img {
                             display: flex;
                             justify-content: end;
                             width: 100%;
                             z-index: 10;
+                            translate: 70px;
+                            opacity: 0;
+                            transition: 1s ease;
+                            &.enter {
+                                translate: 0;
+                                opacity: 1;
+                            }
                             img {
                                 padding-top: 64px;
                                 width: 87.95%;
@@ -762,11 +782,19 @@ letter-spacing: 0.03em;
                     }
                     .methodology__grid__kanban {
                         @include card();
+                        padding-bottom: 0;
                         .methodology__img {
                             display: flex;
                             justify-content: end;
                             width: 100%;
                             z-index: 10;
+                            translate: 70px;
+                            opacity: 0;
+                            transition: 1s ease;
+                            &.enter {
+                                translate: 0;
+                                opacity: 1;
+                            }
                             img {
                                 padding-top: 64px;
                                 width: 88.32%;
@@ -822,16 +850,15 @@ letter-spacing: 0.03em;
                     content: "";
                     position: absolute;
                     left: 25%;
-                    width: 0;
+                    width: 560px;
                     height: 0;
-                    top: 1690px;
+                    top: 1659px;
                     background-image: url("../../public/images/methodologyLine.png");
                     background-repeat: no-repeat;
                     background-size: 560px 222px;
-                    transition: all 1s ease 0s;
+                    transition: all 1.5s ease 0s;
                 }
-                &.anim.play::after{
-                    width: 560px;
+                &.anim.play::after{                    
                     height: 222px;
                 }
             }           
@@ -1134,25 +1161,24 @@ letter-spacing: 0.03em;
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 1379px;
-                    left: 21px;
-                    width: 0;
+                    top: 840px;
+                    left: 34px;
+                    width: 741px;
                     height: 0;
                     background-image: url(../../public/images/inviteLine.png);
                     background-repeat: no-repeat;
-                    background-size: 809px 243px;
+                    background-size: 741px 793px;
                     z-index: 1;
-                    transition: all 1s ease 0s;
+                    transition: all 1.5s ease 0s;
                 }
-                &.anim.play::after{
-                    width: 809px;
-                    height: 243px;
+                &.anim.play::after{                    
+                    height: 793px;
                 }
             }
         }
         .invitation {
             background: linear-gradient(180deg, rgb(3, 3, 22), rgb(6, 5, 34));
-            padding-top: 235px;
+            padding-top: 245px;
             width: 100%;
             @include center();
             .invitation__container {
@@ -1493,7 +1519,7 @@ letter-spacing: 0.03em;
                                 border-radius: 10px;
                                 padding-left: 0; 
                                 &[type="text"] {
-                                  padding-left: 15px; // Оставляем отступ только для текста
+                                  padding-left: 15px;
                                 }
                             }
                             .offer__search__button {
@@ -1944,7 +1970,7 @@ letter-spacing: 0.03em;
                                 height: 244px;
                                 margin-top: -138px;
                                 margin-right: 10px;
-                                z-index: 10;
+                                z-index: 110;
                             }
                         }
                         
