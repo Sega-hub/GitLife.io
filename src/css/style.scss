@@ -87,14 +87,15 @@ $width: 80%;
         text-align: left;
         color: $COLOR_WHITE;
         opacity: 0;
-        transform: translateY(-75px);
-        transition: 1s ease;
         &.appearance {
             opacity: 1;
-            transform: translateY(0);
         }
         span {
-            color: $COLOR_GRAY;
+            opacity: 0;
+            color: $COLOR_GRAY;           
+            &.appearance {
+                opacity: 1;
+            }
         }
     }
 }
@@ -158,10 +159,10 @@ $width: 80%;
     scale: 0;
     opacity: 1;
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     background-color: rgba(4, 0, 110, 0.5);
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
     filter: blur(80px);
     transition:  0.1s ease;
@@ -502,7 +503,7 @@ letter-spacing: 0.03em;
                         position: relative;
                         display: flex;
                         flex-direction: column;
-                        background-color: #020202;
+                        background-image: url("../../public/images/test1.png");
                         width: 100%;
                         max-height: 600px;
                         border-radius: 20px;
@@ -518,13 +519,16 @@ letter-spacing: 0.03em;
                             text-align: left;
                             color: $COLOR_WHITE;
                             opacity: 0;
-                            transform: translateY(-75px);
                             transition: 1s ease;
                             &.appearance {
                                 opacity: 1;
-                                transform: translateY(0);
                             }
-                            span {
+                            span {                                
+                                opacity: 0;
+                                transition: 1s ease 0.5s;
+                                &.appearance {
+                                    opacity: 1;
+                                }
                                 color: $COLOR_GRAY;
                             }
                         }
@@ -556,6 +560,12 @@ letter-spacing: 0.03em;
                        .hosting__grid__branch {
                             @include card();                           
                             padding-bottom: 0;
+                            p {
+                                transition: 1s ease 0s;
+                                span {
+                                    transition: 1s ease 0.1s;
+                                }
+                            }
                             .hosting__img {
                                 display: flex;
                                 justify-content: end;
@@ -564,7 +574,7 @@ letter-spacing: 0.03em;
                                 padding-top: 0px;
                                 translate: 70px;
                                 opacity: 0;
-                                transition: 1s ease;
+                                transition: 1s ease 0.2s;
                                 &.enter {
                                     translate: 0;
                                     opacity: 1;
@@ -580,6 +590,12 @@ letter-spacing: 0.03em;
                        .hosting__grid__manage {
                             @include card();                         
                             padding-bottom: 0;
+                            p {
+                                transition: 1s ease 0.3s;
+                                span {
+                                    transition: 1s ease 0.4s;
+                                }
+                            }
                             .hosting__img {
                                 display: flex;
                                 justify-content: end;
@@ -588,7 +604,7 @@ letter-spacing: 0.03em;
                                 z-index: 10;
                                 translate: 70px;
                                 opacity: 0;
-                                transition: 1s ease;
+                                transition: 1s ease 0.5s;
                                 &.enter {
                                     translate: 0;
                                     opacity: 1;
@@ -610,7 +626,7 @@ letter-spacing: 0.03em;
                     left: 33px;
                     width: 793px;
                     height: 0;
-                    background-image: url("../../public/images/LineHosting.png");
+                    background-image: url("../../public/images/hostingLine.svg");
                     background-repeat: no-repeat;
                     background-size: 793px 271px;
                     transition: all 1.5s ease 0s;
@@ -664,13 +680,16 @@ letter-spacing: 0.03em;
                         text-align: left;
                         color: $COLOR_WHITE;
                         opacity: 0;
-                        transform: translateY(-75px);
                         transition: 1s ease;
                         &.appearance {
                             opacity: 1;
-                            transform: translateY(0);
                         }
                         span {
+                            &.appearance {
+                                opacity: 1;
+                            }
+                            opacity: 0;
+                            transition: 1s ease 0.5s;
                             color: $COLOR_GRAY;
                         }
                     }
@@ -735,17 +754,18 @@ letter-spacing: 0.03em;
                 &::after {
                     content: "";
                     position: absolute;
-                    left: 34px;
-                    top: 1070px;
+                    left: 32px;
+                    top: 965px;
                     width: 926px;
                     height: 0;
-                    background-image: url("../../public/images/teamLine.png");
+                    background-image: url("../../public/images/teamLine.svg");
                     background-repeat: no-repeat;
-                    background-size: 926px 490px;
+                    background-size: 926px 607px;
                     transition: all 1.5s ease 0s;
+                    
                 }
                 &.anim.play::after{                    
-                    height: 490px;
+                    height: 607px;
                 }
             }
         }
@@ -789,6 +809,9 @@ letter-spacing: 0.03em;
                     .methodology__grid__scrum {
                         @include card();
                         padding-bottom: 0;
+                        p {
+                            transition: 1s ease 0s;
+                        }
                         .methodology__img {
                             display: flex;
                             justify-content: end;
@@ -796,7 +819,7 @@ letter-spacing: 0.03em;
                             z-index: 10;
                             translate: 70px;
                             opacity: 0;
-                            transition: 1s ease;
+                            transition: 1s ease 0.1s;
                             &.enter {
                                 translate: 0;
                                 opacity: 1;
@@ -814,6 +837,9 @@ letter-spacing: 0.03em;
                     .methodology__grid__kanban {
                         @include card();
                         padding-bottom: 0;
+                        p {
+                            transition: 1s ease 0.2s;
+                        }
                         .methodology__img {
                             display: flex;
                             justify-content: end;
@@ -821,7 +847,7 @@ letter-spacing: 0.03em;
                             z-index: 10;
                             translate: 70px;
                             opacity: 0;
-                            transition: 1s ease;
+                            transition: 1s ease 0.4s;
                             &.enter {
                                 translate: 0;
                                 opacity: 1;
@@ -855,15 +881,18 @@ letter-spacing: 0.03em;
                         line-height: 23.4px;
                         text-align: left;
                         color: $COLOR_WHITE;
-                        opacity: 0;
-                        transform: translateY(-75px);
+                        opacity: 0;                       
                         transition: 1s ease;
                         &.appearance {
                             opacity: 1;
-                            transform: translateY(0);
                         }
                         span {
+                            opacity: 0;
                             color: $COLOR_GRAY;
+                            transition: 1s ease 0.5s;
+                            &.appearance {
+                                opacity: 1;
+                            }
                         }
                     }
                     .methodology__connection__img {
@@ -891,7 +920,7 @@ letter-spacing: 0.03em;
                     width: 560px;
                     height: 0;
                     top: 1659px;
-                    background-image: url("../../public/images/methodologyLine.png");
+                    background-image: url("../../public/images/methodologyLine.svg");
                     background-repeat: no-repeat;
                     background-size: 560px 222px;
                     transition: all 1.5s ease 0s;
@@ -1199,11 +1228,11 @@ letter-spacing: 0.03em;
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 840px;
-                    left: 34px;
+                    top: 850px;
+                    left: 32px;
                     width: 741px;
                     height: 0;
-                    background-image: url(../../public/images/inviteLine.png);
+                    background-image: url(../../public/images/inviteLine.svg);
                     background-repeat: no-repeat;
                     background-size: 741px 793px;
                     z-index: 1;
@@ -1417,8 +1446,9 @@ letter-spacing: 0.03em;
             text-align: left;
             color: $COLOR_WHITE;
             opacity: 1;
-            transform: translateY(0);
+            
             span {
+                opacity: 1;
                 color: $COLOR_GRAY;
             }
         }
@@ -1799,8 +1829,9 @@ letter-spacing: 0.03em;
                                 text-align: left;
                                 color: $COLOR_WHITE;
                                 opacity: 1;
-                                transform: translateY(0);
+                                
                                 span {
+                                    opacity: 1;
                                     color: $COLOR_GRAY;
                                 }
                             }
@@ -1844,8 +1875,9 @@ letter-spacing: 0.03em;
                                     line-height: 20.8px;
                                     text-align: left;
                                     opacity: 1;
-                                    transform: translateY(0);
+                                    
                                     span {
+                                        opacity: 1;
                                         br {
                                             display: none;
                                         }
@@ -1880,8 +1912,9 @@ letter-spacing: 0.03em;
                                     line-height: 20.8px;
                                     text-align: left;
                                     opacity: 1;
-                                    transform: translateY(0);
+                                    
                                     span {
+                                        opacity: 1;
                                         br {
                                             display: none;
                                         }
@@ -1970,8 +2003,9 @@ letter-spacing: 0.03em;
                             text-align: left;
                             color: $COLOR_WHITE;
                             opacity: 1;
-                            transform: translateY(0);
+                            
                             span {
+                                opacity: 1;
                                 color: $COLOR_GRAY;
                             }
                         }
@@ -2151,8 +2185,9 @@ letter-spacing: 0.03em;
                             text-align: left;
                             color: $COLOR_WHITE; 
                             opacity: 1;
-                            transform: translateY(0);                          
+                                                      
                             span {
+                                opacity: 1;
                                 color: $COLOR_GRAY;
                             }
                         }
