@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
             effect.style.scale = "0";
 
             card.addEventListener("mousemove", (e) => {
-                card.appendChild(effect);
+                if (!card.contains(effect)) {
+                    card.appendChild(effect);
+                }
                 const rect = card.getBoundingClientRect(); 
                 const effectWidth = effect.offsetWidth / 2;
                 const effectHeight = effect.offsetHeight / 2;
@@ -50,7 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
             card.addEventListener("mouseleave", () => {
                 effect.style.scale = "0";
                 card.style.transform = "";
-                card.removeChild(effect);
+                if (card.contains(effect)) {
+                    card.removeChild(effect);
+                }
             });
         });
         
@@ -76,13 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 };
             }
-        
-            function offset(el) {
-                const rect = el.getBoundingClientRect(), 
-                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                    scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-            }
         }    
 
         const moves = document.querySelectorAll("#move");
@@ -107,17 +104,41 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 };
             }
+        }
 
-            function offset(el) {
-                const rect = el.getBoundingClientRect(), 
-                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                    scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        const texts = document.querySelectorAll("#text");
+
+        if (texts.length > 0) {
+            window.addEventListener("scroll", textAppearance);
+            function textAppearance() {
+                for (let i = 0; i < texts.length; i++) {
+                    const textAnim = texts[i];
+                    const textHeight = textAnim.offsetHeight;
+                    const textAnimOffset = offset(textAnim).top;
+                    const textStart = 0.8;
+        
+                    let textStartPoint = window.innerHeight - textHeight / textStart;
+        
+                    if (textHeight > window.innerHeight) {
+                        textStartPoint = window.innerHeight - window.innerHeight / textStart;
+                    }
+        
+                    if ((pageYOffset > textAnimOffset - textStartPoint) && pageYOffset < (textAnimOffset + textHeight)) {               
+                        textAnim.classList.add("appearance");
+                    }
+                };
             }
         }
 
+        function offset(el) {
+            const rect = el.getBoundingClientRect(), 
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        }
+
     } else console.error(`rules doesn't working device width ${innerWidth}.
-        you need more than 1000`);
+        you need more than 999`);
 })
 
 

@@ -550,6 +550,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__discription.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__discription span {
   color: rgb(112, 111, 146);
@@ -597,6 +604,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p span {
   color: rgb(112, 111, 146);
@@ -641,6 +655,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p span {
   color: rgb(112, 111, 146);
@@ -727,6 +748,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .team .team__container .team__card .team__card__discription.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .team .team__container .team__card .team__card__discription span {
   color: rgb(112, 111, 146);
@@ -737,6 +765,11 @@ a {
   display: flex;
   justify-content: end;
   z-index: 10;
+  opacity: 0;
+  transition: 1s ease;
+}
+.container .main .team .team__container .team__card .team__card__img.enter {
+  opacity: 1;
 }
 .container .main .team .team__container .team__card .team__card__img .team__img__mini {
   display: none;
@@ -769,6 +802,11 @@ a {
 .container .main .team .team__container .team__discription .team__discription__img {
   display: flex;
   justify-content: end;
+  opacity: 0;
+  transition: 1s ease 1s;
+}
+.container .main .team .team__container .team__discription .team__discription__img.enter {
+  opacity: 1;
 }
 .container .main .team .team__container .team__discription .team__discription__img img {
   width: 294px;
@@ -853,6 +891,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p span {
   color: rgb(112, 111, 146);
@@ -897,6 +942,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p span {
   color: rgb(112, 111, 146);
@@ -941,6 +993,13 @@ a {
   line-height: 23.4px;
   text-align: left;
   color: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(-75px);
+  transition: 1s ease;
+}
+.container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription.appearance {
+  opacity: 1;
+  transform: translateY(0);
 }
 .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription span {
   color: rgb(112, 111, 146);
@@ -1982,6 +2041,8 @@ a {
     line-height: 20.8px;
     text-align: left;
     color: rgb(255, 255, 255);
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__discription span {
     color: rgb(112, 111, 146);
@@ -2026,6 +2087,8 @@ a {
     font-weight: 500;
     line-height: 20.8px;
     text-align: left;
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p span br {
     display: none;
@@ -2059,6 +2122,8 @@ a {
     font-weight: 500;
     line-height: 20.8px;
     text-align: left;
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p span br {
     display: none;
@@ -2142,6 +2207,8 @@ a {
     line-height: 20.8px;
     text-align: left;
     color: rgb(255, 255, 255);
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .team .team__container .team__card .team__card__discription br {
     display: none;
@@ -2153,6 +2220,7 @@ a {
     padding-top: 0;
     display: flex;
     justify-content: end;
+    opacity: 1;
   }
   .container .main .team .team__container .team__card .team__card__img .team__img__big {
     display: none;
@@ -2192,6 +2260,7 @@ a {
   .container .main .team .team__container .team__discription .team__discription__img {
     display: flex;
     justify-content: end;
+    opacity: 1;
   }
   .container .main .team .team__container .team__discription .team__discription__img img {
     width: 254px;
@@ -2284,6 +2353,8 @@ a {
     line-height: 20.8px;
     text-align: left;
     color: rgb(255, 255, 255);
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p span {
     color: rgb(112, 111, 146);
@@ -2325,6 +2396,8 @@ a {
     line-height: 20.8px;
     text-align: left;
     color: rgb(255, 255, 255);
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p span {
     color: rgb(112, 111, 146);
@@ -2364,6 +2437,8 @@ a {
     line-height: 20.8px;
     text-align: left;
     color: rgb(255, 255, 255);
+    opacity: 1;
+    transform: translateY(0);
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription span {
     color: rgb(112, 111, 146);

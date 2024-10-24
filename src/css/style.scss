@@ -86,6 +86,13 @@ $width: 80%;
         line-height: 23.4px;
         text-align: left;
         color: $COLOR_WHITE;
+        opacity: 0;
+        transform: translateY(-75px);
+        transition: 1s ease;
+        &.appearance {
+            opacity: 1;
+            transform: translateY(0);
+        }
         span {
             color: $COLOR_GRAY;
         }
@@ -510,6 +517,13 @@ letter-spacing: 0.03em;
                             line-height: 23.4px;
                             text-align: left;
                             color: $COLOR_WHITE;
+                            opacity: 0;
+                            transform: translateY(-75px);
+                            transition: 1s ease;
+                            &.appearance {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
                             span {
                                 color: $COLOR_GRAY;
                             }
@@ -649,6 +663,13 @@ letter-spacing: 0.03em;
                         line-height: 23.4px;
                         text-align: left;
                         color: $COLOR_WHITE;
+                        opacity: 0;
+                        transform: translateY(-75px);
+                        transition: 1s ease;
+                        &.appearance {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
                         span {
                             color: $COLOR_GRAY;
                         }
@@ -659,6 +680,11 @@ letter-spacing: 0.03em;
                         display: flex;
                         justify-content: end;
                         z-index: 10;
+                        opacity: 0;
+                        transition: 1s ease;
+                        &.enter {
+                            opacity: 1;
+                        }
                         .team__img__mini{
                             display: none;
                         }
@@ -691,6 +717,11 @@ letter-spacing: 0.03em;
                     .team__discription__img {
                         display: flex;
                         justify-content: end;
+                        opacity: 0;
+                        transition: 1s ease 1s;
+                        &.enter {
+                            opacity: 1;
+                        }
                         img {
                             width: 294px;
                             height: 283px;
@@ -824,6 +855,13 @@ letter-spacing: 0.03em;
                         line-height: 23.4px;
                         text-align: left;
                         color: $COLOR_WHITE;
+                        opacity: 0;
+                        transform: translateY(-75px);
+                        transition: 1s ease;
+                        &.appearance {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
                         span {
                             color: $COLOR_GRAY;
                         }
@@ -1378,6 +1416,8 @@ letter-spacing: 0.03em;
             line-height: 20.8px;
             text-align: left;
             color: $COLOR_WHITE;
+            opacity: 1;
+            transform: translateY(0);
             span {
                 color: $COLOR_GRAY;
             }
@@ -1758,6 +1798,8 @@ letter-spacing: 0.03em;
                                 line-height: 20.8px;
                                 text-align: left;
                                 color: $COLOR_WHITE;
+                                opacity: 1;
+                                transform: translateY(0);
                                 span {
                                     color: $COLOR_GRAY;
                                 }
@@ -1801,6 +1843,8 @@ letter-spacing: 0.03em;
                                     font-weight: 500;
                                     line-height: 20.8px;
                                     text-align: left;
+                                    opacity: 1;
+                                    transform: translateY(0);
                                     span {
                                         br {
                                             display: none;
@@ -1835,6 +1879,8 @@ letter-spacing: 0.03em;
                                     font-weight: 500;
                                     line-height: 20.8px;
                                     text-align: left;
+                                    opacity: 1;
+                                    transform: translateY(0);
                                     span {
                                         br {
                                             display: none;
@@ -1923,6 +1969,8 @@ letter-spacing: 0.03em;
                             line-height: 20.8px;
                             text-align: left;
                             color: $COLOR_WHITE;
+                            opacity: 1;
+                            transform: translateY(0);
                             span {
                                 color: $COLOR_GRAY;
                             }
@@ -1931,6 +1979,7 @@ letter-spacing: 0.03em;
                             padding-top: 0;
                             display: flex;
                             justify-content: end;
+                            opacity: 1;
                             .team__img__big{
                                 display: none;
                             }
@@ -1969,6 +2018,7 @@ letter-spacing: 0.03em;
                         .team__discription__img {
                             display: flex;
                             justify-content: end;
+                            opacity: 1;
                             img {
                                 width: 254px;
                                 height: 244px;
@@ -2091,8 +2141,7 @@ letter-spacing: 0.03em;
                         border-radius: 20px;
                         border: 1px solid rgb(73, 73, 73);
                         background-color: #0c0c0a;
-                        .methodology__connection__discription {
-                           
+                        .methodology__connection__discription {                           
                             max-width: 330px;
                             padding: 60px 0 0 20px;
                             font-family: "Hauora";
@@ -2100,7 +2149,9 @@ letter-spacing: 0.03em;
                             font-weight: 500;
                             line-height: 20.8px;
                             text-align: left;
-                            color: $COLOR_WHITE;
+                            color: $COLOR_WHITE; 
+                            opacity: 1;
+                            transform: translateY(0);                          
                             span {
                                 color: $COLOR_GRAY;
                             }
