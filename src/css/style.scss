@@ -2522,7 +2522,6 @@ $width: 80%;
                     .methodology__grid {
                         padding-top: 108px;
                         width: 100%;
-                        max-width: 711px;
                         display: grid;
                         grid-template-columns: repeat(2, 48.92%);
                         gap: 0 24px;
@@ -2588,59 +2587,97 @@ $width: 80%;
                         flex-direction: column;
                         justify-content: space-between;
                         margin-top: 24px;
-                        width: 94.87%;
-                        height: 510px;                        
-                        background-size: 370px 510px;
+                        width: 100%;
+                        height: 653px;
                         border-radius: 20px;
-                        border: 1px solid rgb(73, 73, 73);
-                        background-color: #060606;     
-                        background-repeat: no-repeat;            
+                        border: 1px solid rgba(73, 73, 73, 1);
+                        background-color: #060606;  
+                        background-size: 1120px 653px;                 
                         &.show {
-                            background-image: url("../../public/images/metodologyBackMini.png");
+                            background-image: url("../../public/images/methodologyBack.png");
                         }
-                        .methodology__connection__discription {                           
+                        .methodology__connection__discription {
                             max-width: 330px;
-                            padding: 60px 0 0 20px;
+                            padding: 80px 0 0 95px;
                             font-family: "Hauora";
-                            font-size: 16px;
+                            font-size: $FONT_SIZE_18;
                             font-weight: 500;
-                            line-height: 20.8px;
+                            letter-spacing: 0.02em;
+                            line-height: 23.4px;
                             text-align: left;
-                            color: $COLOR_WHITE;                                                       
+                            color: $COLOR_WHITE;
+                            z-index: 10;
+                            opacity: 0;                       
+                            transition: 1s ease;
+                            &.appearance {
+                                opacity: 1;
+                            }
                             span {
+                                opacity: 0;
                                 color: $COLOR_GRAY;
+                                transition: 1s ease 0.5s;
+                                &.appearance {
+                                    opacity: 1;
+                                }
                             }
                         }
                         .methodology__connection__img {
-                            position: relative;
                             width: 100%;
                             display: flex;
                             justify-content: end;
+                            z-index: 10;
                             .methodology__connection__big {
-                                display: none;
-                            }
-                            .methodology__img__mini {
                                 display: flex;
-                            }
-                            img {
-                                width: 100%;
-                                height: auto;
-                                border-bottom-right-radius: 20px;
-                                border-bottom-left-radius: 20px;
-                            } 
-                            .methodology__push {
-                                display: flex;
-                                z-index: 10;
-                                position: relative;
-                                width: 275px;
-                                height: 227px;
-                                top: 76%;
-                                opacity: 0;
-                                transition: all 1s ease 0s;
-                                &.enter {
+                                align-items: end;
+                                .methodologyBottom {
+                                    opacity: 0;
+                                    z-index: 11;
+                                    transition: all 1s ease 0.5s;
+                                    width: 430px;
+                                    height: 405px;
+                                    background-size: 430px 405px;
+                                    &.show {
+                                        opacity: 1;
+                                    }
+                                }
+                                .methodologyTop {
+                                    position: relative;
+                                    width: 294px;
+                                    height: 230px;
+                                    background-size: 294px 230px;
+                                    top: -212px;
+                                    left: 268px;
+                                    opacity: 0;
+                                    z-index: 12;
+                                    transition: all 1s ease 1s;                                         
+                                    border-radius: 16px;
+                                    box-shadow: 15px 80px 55px rgba(6, 6, 6, 0.7);
+                                    &.show {
+                                        opacity: 1;
+                                    }
+                                }
+                                &::before {
+                                    content: "";
+                                    position: relative;
+                                    background-image: url("../../public/images/methodologyBranch.png");
+                                    width: 151px; 
+                                    height: 124px;
+                                    top: -135px;                                                              
+                                    left: 292px;
+                                    transition: all 3s ease 1.5s;
+                                    background-size: 151px 124px;
+                                    opacity: 0;
+                                }
+                                &.show::before {   
                                     opacity: 1;
                                 }
-                            }                         
+                            }
+                            .methodology__img__mini {
+                                display: none;
+                            }
+                            .methodology__push {
+                                display: none;
+                            }
                         }
                     }
                     &::after {

@@ -2851,7 +2851,6 @@ a {
   .container .main .methodology .methodology__container .methodology__grid {
     padding-top: 108px;
     width: 100%;
-    max-width: 711px;
     display: grid;
     grid-template-columns: repeat(2, 48.92%);
     gap: 0 24px;
@@ -2973,60 +2972,98 @@ a {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 24px;
-    width: 94.87%;
-    height: 510px;
-    background-size: 370px 510px;
+    width: 100%;
+    height: 653px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
     background-color: #060606;
-    background-repeat: no-repeat;
+    background-size: 1120px 653px;
   }
   .container .main .methodology .methodology__container .methodology__connection.show {
-    background-image: url("../../public/images/metodologyBackMini.png");
+    background-image: url("../../public/images/methodologyBack.png");
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription {
     max-width: 330px;
-    padding: 60px 0 0 20px;
+    padding: 80px 0 0 95px;
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(255, 255, 255);
+    z-index: 10;
+    opacity: 0;
+    transition: 1s ease;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription.appearance {
+    opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription span {
+    opacity: 0;
     color: rgb(112, 111, 146);
+    transition: 1s ease 0.5s;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription span.appearance {
+    opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img {
-    position: relative;
     width: 100%;
     display: flex;
     justify-content: end;
+    z-index: 10;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big {
-    display: none;
+    display: flex;
+    align-items: end;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big .methodologyBottom {
+    opacity: 0;
+    z-index: 11;
+    transition: all 1s ease 0.5s;
+    width: 430px;
+    height: 405px;
+    background-size: 430px 405px;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big .methodologyBottom.show {
+    opacity: 1;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big .methodologyTop {
+    position: relative;
+    width: 294px;
+    height: 230px;
+    background-size: 294px 230px;
+    top: -212px;
+    left: 268px;
+    opacity: 0;
+    z-index: 12;
+    transition: all 1s ease 1s;
+    border-radius: 16px;
+    box-shadow: 15px 80px 55px rgba(6, 6, 6, 0.7);
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big .methodologyTop.show {
+    opacity: 1;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big::before {
+    content: "";
+    position: relative;
+    background-image: url("../../public/images/methodologyBranch.png");
+    width: 151px;
+    height: 124px;
+    top: -135px;
+    left: 292px;
+    transition: all 3s ease 1.5s;
+    background-size: 151px 124px;
+    opacity: 0;
+  }
+  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__connection__big.show::before {
+    opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__img__mini {
-    display: flex;
-  }
-  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img img {
-    width: 100%;
-    height: auto;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    display: none;
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__push {
-    display: flex;
-    z-index: 10;
-    position: relative;
-    width: 275px;
-    height: 227px;
-    top: 76%;
-    opacity: 0;
-    transition: all 1s ease 0s;
-  }
-  .container .main .methodology .methodology__container .methodology__connection .methodology__connection__img .methodology__push.enter {
-    opacity: 1;
+    display: none;
   }
   .container .main .methodology .methodology__container::after {
     content: "";
