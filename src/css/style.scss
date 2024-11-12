@@ -2180,7 +2180,6 @@ $width: 80%;
                     flex-direction: column;
                     align-items: center;
                     .hosting__title {
-                        padding: 0;
                         width: 100%;
                         max-width: 684px;
                         padding-top: 118px;
@@ -2212,14 +2211,15 @@ $width: 80%;
                             height: 666px;
                             border-radius: 20px;
                             border: 1px solid $COLOR_DARK_GRAY;
-                            background-size: 1121px 666px;                            
+                            background-size: 684px 666px;    
+                            background-repeat: no-repeat;                       
                             overflow: hidden;  
                             &.show {
-                                background-image: url("../../public/images/hostingBack.png");
+                                background-image: url("../../public/images/planshetHostingBack.png");
                             }
     
                             .hosting__code__discription {
-                                padding: 88px 0 0 95px;
+                                padding: 80px 0 0 95px;
                                 font-family: "Hauora";
                                 font-size: $FONT_SIZE_18;
                                 font-weight: 500;
@@ -2314,6 +2314,7 @@ $width: 80%;
                                 @include card();                           
                                 padding-bottom: 0;
                                 p {
+                                    padding: 80px 0 0 95px;
                                     transition: 1s ease 0s;
                                     span {
                                         transition: 1s ease 0.1s;
@@ -2354,6 +2355,7 @@ $width: 80%;
                                 padding-bottom: 0;
                                 p {
                                     transition: 1s ease 0.3s;
+                                    padding: 80px 0 0 95px;
                                     span {
                                         transition: 1s ease 0.4s;
                                     }
@@ -2448,12 +2450,11 @@ $width: 80%;
                     .team__card {
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
                         overflow: hidden;
-                        width: 684px;
+                        width: 684px;                        
+                        height: auto;
                         margin: 0;
-                        margin-top: 40px;
-                        height: 653px;
+                        margin-top: 83px;
                         border-radius: 20px;
                         background-color: rgb(6, 6, 6);
                         border: 1px solid rgb(73, 73, 73);
@@ -2461,6 +2462,7 @@ $width: 80%;
                             br {
                                 display: none;
                             }
+                            padding: 80px 0 0 88px;
                             max-width: 375px;
                             font-family: "Hauora";
                             font-size: $FONT_SIZE_18;
@@ -2494,9 +2496,11 @@ $width: 80%;
                             img { 
                                 padding-top: 60px;                       
                                 width: 596px;
-                                height: auto;
+                                height: 443px;
+                                max-height: 443px;
+                                max-width: none;
                                 border-bottom-right-radius: 20px;
-                                border-bottom-left-radius: 20px;
+                                border-bottom-left-radius: 0px;
                                 object-fit: fill;
                             }
                         }
@@ -2508,7 +2512,7 @@ $width: 80%;
                         flex-direction: column-reverse;
                         .team__discription-text {                         
                             max-width: 420px;
-                            padding: 26px 0 0 0;
+                            padding: 0 0 0 0;
                             font-family: "Hauora";
                             font-size: $FONT_SIZE_18;
                             font-weight: 500;
@@ -2527,18 +2531,18 @@ $width: 80%;
                             justify-content: end;
                             opacity: 1;
                             .teamTop {
-                                width: 254px;
-                                height: 198.3px;
-                                top: -115px;
+                                width: 294px;
+                                height: 230px;
+                                top: -130px;
                                 left: 0px;
                                 &.enter {
                                     opacity: 1;
                                 }
                             }
                            .teamBottom {
-                                width: 226.35px !important;
-                                height: 159.51px !important;
-                                left: 245px;
+                                width: 262px !important;
+                                height: 185px !important;
+                                left: 280px;
                                 top: -32px;
                                 &.enter {
                                     opacity: 1;
@@ -2550,7 +2554,7 @@ $width: 80%;
                     &::after {
                         content: "";
                         position: absolute;
-                        top: 1310px;
+                        top: 1370px;
                         left: 32px;
                         width: 3px;
                         height: 0px;
@@ -2561,7 +2565,7 @@ $width: 80%;
                     &.mobAnim::after {
                         content: "";
                         position: absolute;
-                        top: 1310px;
+                        top: 1370px;
                         left: 32px;
                         width: 3px;
                         height: 214px;
@@ -2602,6 +2606,7 @@ $width: 80%;
                             padding-bottom: 0;
                             p {
                                 transition: 1s ease 0s;
+                                padding: 79px 0 0 88px;
                             }
                             .methodology__img {
                                 display: flex;
@@ -2622,7 +2627,7 @@ $width: 80%;
                                     opacity: 1;
                                 }
                                 img {
-                                    padding-top: 50px;
+                                    padding-top: 60px;
                                     width: 597px;
                                     height: auto;
                                     border-bottom-right-radius: 20px;
@@ -2639,6 +2644,7 @@ $width: 80%;
                             padding-bottom: 0;
                             p {
                                 transition: 1s ease 0.2s;
+                                padding: 80px 0 0 88px;
                             }
                             .methodology__img {
                                 display: flex;
@@ -2659,7 +2665,7 @@ $width: 80%;
                                     opacity: 1;
                                 }
                                 img {
-                                    padding-top: 50px;
+                                    padding-top: 60px;
                                     width: 596px;
                                     height: 411px;
                                     border-bottom-right-radius: 20px;
@@ -2680,13 +2686,13 @@ $width: 80%;
                         border-radius: 20px;
                         border: 1px solid rgba(73, 73, 73, 1);
                         background-color: #060606;  
-                        background-size: 1120px 666px;                 
+                        background-size: 684px 666px;                 
                         &.show {
-                            background-image: url("../../public/images/methodologyBackPlanshet.png");
+                            background-image: url("../../public/images/planshetMethodologyBack.png");
                         }
                         .methodology__connection__discription {
                             max-width: 330px;
-                            padding: 80px 0 0 95px;
+                            padding: 80px 0 0 88px;
                             font-family: "Hauora";
                             font-size: $FONT_SIZE_18;
                             font-weight: 500;
@@ -2697,6 +2703,7 @@ $width: 80%;
                             z-index: 10;
                             opacity: 0;                       
                             transition: 1s ease;
+                            
                             &.appearance {
                                 opacity: 1;
                             }

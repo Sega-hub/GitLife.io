@@ -2577,7 +2577,6 @@ a {
     align-items: center;
   }
   .container .main .hosting .hosting__container .hosting__title {
-    padding: 0;
     width: 100%;
     max-width: 684px;
     padding-top: 118px;
@@ -2612,14 +2611,15 @@ a {
     height: 666px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
-    background-size: 1121px 666px;
+    background-size: 684px 666px;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__code.show {
-    background-image: url("../../public/images/hostingBack.png");
+    background-image: url("../../public/images/planshetHostingBack.png");
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__discription {
-    padding: 88px 0 0 95px;
+    padding: 80px 0 0 95px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -2742,6 +2742,7 @@ a {
     opacity: 1;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p {
+    padding: 80px 0 0 95px;
     transition: 1s ease 0s;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p span {
@@ -2812,6 +2813,7 @@ a {
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p {
     transition: 1s ease 0.3s;
+    padding: 80px 0 0 95px;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p span {
     transition: 1s ease 0.4s;
@@ -2906,17 +2908,17 @@ a {
   .container .main .team .team__container .team__card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
     width: 684px;
+    height: auto;
     margin: 0;
-    margin-top: 40px;
-    height: 653px;
+    margin-top: 83px;
     border-radius: 20px;
     background-color: rgb(6, 6, 6);
     border: 1px solid rgb(73, 73, 73);
   }
   .container .main .team .team__container .team__card .team__card__discription {
+    padding: 80px 0 0 88px;
     max-width: 375px;
     font-family: "Hauora";
     font-size: 18px;
@@ -2953,9 +2955,11 @@ a {
   .container .main .team .team__container .team__card .team__card__img img {
     padding-top: 60px;
     width: 596px;
-    height: auto;
+    height: 443px;
+    max-height: 443px;
+    max-width: none;
     border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 0px;
     -o-object-fit: fill;
        object-fit: fill;
   }
@@ -2967,7 +2971,7 @@ a {
   }
   .container .main .team .team__container .team__discription .team__discription-text {
     max-width: 420px;
-    padding: 26px 0 0 0;
+    padding: 0 0 0 0;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -2987,18 +2991,18 @@ a {
     opacity: 1;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamTop {
-    width: 254px;
-    height: 198.3px;
-    top: -115px;
+    width: 294px;
+    height: 230px;
+    top: -130px;
     left: 0px;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamTop.enter {
     opacity: 1;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamBottom {
-    width: 226.35px !important;
-    height: 159.51px !important;
-    left: 245px;
+    width: 262px !important;
+    height: 185px !important;
+    left: 280px;
     top: -32px;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamBottom.enter {
@@ -3007,7 +3011,7 @@ a {
   .container .main .team .team__container::after {
     content: "";
     position: absolute;
-    top: 1310px;
+    top: 1370px;
     left: 32px;
     width: 3px;
     height: 0px;
@@ -3018,7 +3022,7 @@ a {
   .container .main .team .team__container.mobAnim::after {
     content: "";
     position: absolute;
-    top: 1310px;
+    top: 1370px;
     left: 32px;
     width: 3px;
     height: 214px;
@@ -3090,6 +3094,7 @@ a {
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p {
     transition: 1s ease 0s;
+    padding: 79px 0 0 88px;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img {
     display: flex;
@@ -3111,7 +3116,7 @@ a {
     opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img img {
-    padding-top: 50px;
+    padding-top: 60px;
     width: 597px;
     height: auto;
     border-bottom-right-radius: 20px;
@@ -3156,6 +3161,7 @@ a {
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p {
     transition: 1s ease 0.2s;
+    padding: 80px 0 0 88px;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img {
     display: flex;
@@ -3177,7 +3183,7 @@ a {
     opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img img {
-    padding-top: 50px;
+    padding-top: 60px;
     width: 596px;
     height: 411px;
     border-bottom-right-radius: 20px;
@@ -3195,14 +3201,14 @@ a {
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
     background-color: #060606;
-    background-size: 1120px 666px;
+    background-size: 684px 666px;
   }
   .container .main .methodology .methodology__container .methodology__connection.show {
-    background-image: url("../../public/images/methodologyBackPlanshet.png");
+    background-image: url("../../public/images/planshetMethodologyBack.png");
   }
   .container .main .methodology .methodology__container .methodology__connection .methodology__connection__discription {
     max-width: 330px;
-    padding: 80px 0 0 95px;
+    padding: 80px 0 0 88px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
