@@ -80,7 +80,7 @@ $width: 80%;
     border: 1px solid $COLOR_DARK_GRAY;
     padding-bottom: 1px;
     p {
-        padding: 88px 0 0 79px;
+        padding: 88px 0 0 95px;
         font-family: "Hauora";
         font-size: 18px;
         font-weight: 500;
@@ -828,7 +828,7 @@ $width: 80%;
                     border: 1px solid $COLOR_DARK_GRAY;
                     .team__card__discription {
                         position: relative;
-                        padding: 80px 0 0 95px;
+                        padding: 88px 0 0 95px;
                         font-family: "Hauora";
                         font-size: $FONT_SIZE_18;
                         font-weight: 500;
@@ -1800,6 +1800,7 @@ $width: 80%;
             }
 
             .header__container {
+                max-width: 744px;
                 width: $width;
                 display: flex;
                 justify-content: space-between;
@@ -1837,7 +1838,7 @@ $width: 80%;
                 position: relative;
                 width: 100%;
                 @include center();
-                background-image: linear-gradient(rgb(10, 9, 67, 0.8) 10%, rgb(0, 0, 0));
+                background-image: linear-gradient(rgba(10, 9, 67, 0.5) 10%, rgb(0, 0, 0));
                 background-blend-mode: overlay; 
                 background-position: center;
                 aspect-ratio: 16/9;
@@ -1846,13 +1847,14 @@ $width: 80%;
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 60%;
+                    height: 100%;
                     object-fit: cover; 
                     z-index: -1; 
                 }
                 .offer__container {
-                    padding-top: 495px;
+                    padding-top: 620px;
                     width: $width;
+                    max-width: 744px;
                     @include center();
                     flex-direction: column;
                     .offer__buttons {
@@ -1964,7 +1966,7 @@ $width: 80%;
                 width: 100%;
                 @include center();                 
                 .openspace__container {
-                    max-width: 1120px;
+                    max-width: 744px;
                     width: $width;
                     @include center();
                     flex-direction: column;
@@ -2146,7 +2148,7 @@ $width: 80%;
                 .hosting__container {
                     position: relative;
                     width: $width;                
-                    max-width: none;
+                    max-width: 744px;
                     .hosting__title {
                         padding: 0;
                         width: 100%;
@@ -2175,7 +2177,7 @@ $width: 80%;
                             flex-direction: column;
                             justify-content: space-between;
                             background-color: #060606;
-                            width: 684px;
+                            width: 100%;
                             height: 666px;
                             border-radius: 20px;
                             border: 1px solid $COLOR_DARK_GRAY;
@@ -2186,7 +2188,7 @@ $width: 80%;
                             }
     
                             .hosting__code__discription {
-                                padding: 80px 0 0 95px;
+                                padding: 88px 0 0 95px;
                                 font-family: "Hauora";
                                 font-size: $FONT_SIZE_18;
                                 font-weight: 500;
@@ -2263,7 +2265,7 @@ $width: 80%;
                             flex-direction: column;
                             align-items: center;
                            .hosting__grid__branch {
-                                width:684px;
+                                width: 100%;
                                 height: 666px;
                                 @include card();                           
                                 padding-bottom: 0;
@@ -2295,7 +2297,7 @@ $width: 80%;
                                 }
                            }
                            .hosting__grid__manage {
-                                width:684px;
+                                width: 100%;
                                 height: 666px;
                                 margin-top: 24px;
                                 @include card();                         
@@ -2361,7 +2363,7 @@ $width: 80%;
                     padding-top: 225px;
                     position: relative;
                     width: $width;
-                    max-width: none;
+                    max-width: 744px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -2390,7 +2392,7 @@ $width: 80%;
                         flex-direction: column;
                         justify-content: space-between;
                         overflow: hidden;
-                        width: 684px;
+                        width: 100%;
                         margin: 0;
                         margin-top: 40px;
                         height: 653px;
@@ -2402,11 +2404,11 @@ $width: 80%;
                                 display: none;
                             }
                             max-width: 375px;
-                            padding: 80px 0 0 88px;
                             font-family: "Hauora";
-                            font-size: $FONT_SIZE_16;
+                            font-size: $FONT_SIZE_18;
                             font-weight: 500;
-                            line-height: 20.8px;
+                            letter-spacing: 0.02em;
+                            line-height: 23.4px;
                             text-align: left;
                             color: $COLOR_WHITE;
                             
@@ -2431,11 +2433,11 @@ $width: 80%;
                             img {       
                                 transform: translateX(5%);
                                 padding-top: 103px;                       
-                                width: 596px;
-                                height: 443px;
+                                width: 684px;
+                                height: 653px;
                                 border-bottom-right-radius: 20px;
                                 border-bottom-left-radius: 20px;
-                                object-fit: cover;
+                                object-fit: fill;
                             }
                         }
                     }
@@ -2518,7 +2520,7 @@ $width: 80%;
                 .methodology__container {
                     width: $width;
                     position: relative;
-                    max-width: none;
+                    max-width: 744px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -2535,7 +2537,7 @@ $width: 80%;
                         flex-direction: column;
                         align-items: center;
                         .methodology__grid__scrum {
-                            width: 684px;
+                            width: 100%;
                             height: 666px;
                             @include card();
                             padding-bottom: 0;
@@ -2565,7 +2567,7 @@ $width: 80%;
                             }
                         }
                         .methodology__grid__kanban {
-                            width: 684px;
+                            width: 100%;
                             height: 666px;
                             margin-top: 24px;
                             @include card();
@@ -2602,7 +2604,7 @@ $width: 80%;
                         justify-content: space-between;
                         overflow: hidden;
                         margin-top: 24px;
-                        width: 684px;
+                        width: 100%;
                         height: 666px;
                         border-radius: 20px;
                         border: 1px solid rgba(73, 73, 73, 1);
@@ -2784,7 +2786,7 @@ $width: 80%;
                 .cases__container {
                     position: relative;
                     width: $width;
-                    max-width: none;
+                    max-width: 744px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -2811,7 +2813,7 @@ $width: 80%;
                     }
                     .cases__box {
                         padding: 40px 0 0 0;
-                        width: 94.85%;
+                        width: 100%;
                         display: flex;  
                         flex-direction: column;                  
                         gap: 20px;
@@ -2823,7 +2825,7 @@ $width: 80%;
                             align-items: center;                      
                             gap: 20px;
                             .cases__indie {     
-                                width: 684px;
+                                width: 100%;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box;                                        
@@ -2839,9 +2841,10 @@ $width: 80%;
                                     z-index: 10;
                                     .cases__indie__name {
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;                            
                                     }
@@ -2855,9 +2858,10 @@ $width: 80%;
                                         max-width: 420px;
                                         padding-top: 30px;
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;
                                         span {
@@ -2881,7 +2885,7 @@ $width: 80%;
                                 }
                             }
                             .cases__buisnes {
-                                width: 684px;
+                                width: 100%;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box;  
@@ -2898,9 +2902,10 @@ $width: 80%;
                                     z-index: 10;
                                     .cases__buisnes__name {
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;                            
                                     }
@@ -2915,9 +2920,10 @@ $width: 80%;
                                         max-width: 420px;
                                         padding-top: 30px;
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;
                                         span {
@@ -2946,7 +2952,7 @@ $width: 80%;
                             align-items: center;
                             gap: 20px;
                             .cases__startup {   
-                                width: 684px;
+                                width: 100%;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box; 
@@ -2962,9 +2968,10 @@ $width: 80%;
                                     z-index: 10;
                                     .cases__indie__name {
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;                            
                                     }
@@ -2972,9 +2979,10 @@ $width: 80%;
                                         max-width: 420px;
                                         padding-top: 30px;
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;
                                         span {
@@ -2996,7 +3004,7 @@ $width: 80%;
                                 }
                             }                      
                             .cases__interprise {
-                                width: 684px;
+                                width: 100%;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box;                            
@@ -3012,9 +3020,10 @@ $width: 80%;
                                     z-index: 10;
                                     .cases__indie__name {
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;                            
                                     }
@@ -3022,9 +3031,10 @@ $width: 80%;
                                         max-width: 420px;
                                         padding-top: 30px;
                                         font-family: "Hauora";
-                                        font-size: 16px;
+                                        font-size: $FONT_SIZE_18;
                                         font-weight: 500;
-                                        line-height: 20.8px;
+                                        letter-spacing: 0.02em;
+                                        line-height: 23.4px;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;
                                         span {
@@ -3079,7 +3089,7 @@ $width: 80%;
                 @include center();
                 .invitation__container {
                     width: $width;
-                    max-width: 1120px;
+                    max-width: 744px;
                     display: flex;
                     flex-direction: column;
                     .invitation__title {
@@ -3178,7 +3188,7 @@ $width: 80%;
             @include center();
             .footer__container {
                 width: $width;
-                max-width: none;
+                max-width: 744px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;

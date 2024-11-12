@@ -730,7 +730,7 @@ a {
   padding-bottom: 0;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p {
-  padding: 88px 0 0 79px;
+  padding: 88px 0 0 95px;
   font-family: "Hauora";
   font-size: 18px;
   font-weight: 500;
@@ -790,7 +790,7 @@ a {
   padding-bottom: 0;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p {
-  padding: 88px 0 0 79px;
+  padding: 88px 0 0 95px;
   font-family: "Hauora";
   font-size: 18px;
   font-weight: 500;
@@ -902,7 +902,7 @@ a {
 }
 .container .main .team .team__container .team__card .team__card__discription {
   position: relative;
-  padding: 80px 0 0 95px;
+  padding: 88px 0 0 95px;
   font-family: "Hauora";
   font-size: 18px;
   font-weight: 500;
@@ -1078,7 +1078,7 @@ a {
   padding-bottom: 0;
 }
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p {
-  padding: 88px 0 0 79px;
+  padding: 88px 0 0 95px;
   font-family: "Hauora";
   font-size: 18px;
   font-weight: 500;
@@ -1135,7 +1135,7 @@ a {
   padding-bottom: 0;
 }
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p {
-  padding: 88px 0 0 79px;
+  padding: 88px 0 0 95px;
   font-family: "Hauora";
   font-size: 18px;
   font-weight: 500;
@@ -2045,6 +2045,7 @@ a {
     transform: translateY(-100%);
   }
   .container .header .header__container {
+    max-width: 744px;
     width: 91.93%;
     display: flex;
     justify-content: space-between;
@@ -2105,7 +2106,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(10, 9, 67, 0.8) 10%, rgb(0, 0, 0));
+    background-image: linear-gradient(rgba(10, 9, 67, 0.5) 10%, rgb(0, 0, 0));
     background-blend-mode: overlay;
     background-position: center;
     aspect-ratio: 16/9;
@@ -2115,14 +2116,15 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     z-index: -1;
   }
   .container .main .offer .offer__container {
-    padding-top: 495px;
+    padding-top: 620px;
     width: 91.93%;
+    max-width: 744px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2362,7 +2364,7 @@ a {
     align-items: center;
   }
   .container .main .openspace .openspace__container {
-    max-width: 1120px;
+    max-width: 744px;
     width: 91.93%;
     display: flex;
     justify-content: center;
@@ -2542,7 +2544,7 @@ a {
   .container .main .hosting .hosting__container {
     position: relative;
     width: 91.93%;
-    max-width: none;
+    max-width: 744px;
   }
   .container .main .hosting .hosting__container .hosting__title {
     padding: 0;
@@ -2575,7 +2577,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     background-color: #060606;
-    width: 684px;
+    width: 100%;
     height: 666px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
@@ -2586,7 +2588,7 @@ a {
     background-image: url("../../public/images/hostingBack.png");
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__discription {
-    padding: 80px 0 0 95px;
+    padding: 88px 0 0 95px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -2661,7 +2663,7 @@ a {
     align-items: center;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch {
-    width: 684px;
+    width: 100%;
     height: 666px;
     display: flex;
     flex-direction: column;
@@ -2674,7 +2676,7 @@ a {
     padding-bottom: 0;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p {
-    padding: 88px 0 0 79px;
+    padding: 88px 0 0 95px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -2723,7 +2725,7 @@ a {
        object-fit: cover;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage {
-    width: 684px;
+    width: 100%;
     height: 666px;
     margin-top: 24px;
     display: flex;
@@ -2737,7 +2739,7 @@ a {
     padding-bottom: 0;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p {
-    padding: 88px 0 0 79px;
+    padding: 88px 0 0 95px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -2818,7 +2820,7 @@ a {
     padding-top: 225px;
     position: relative;
     width: 91.93%;
-    max-width: none;
+    max-width: 744px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2848,7 +2850,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    width: 684px;
+    width: 100%;
     margin: 0;
     margin-top: 40px;
     height: 653px;
@@ -2858,11 +2860,11 @@ a {
   }
   .container .main .team .team__container .team__card .team__card__discription {
     max-width: 375px;
-    padding: 80px 0 0 88px;
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(255, 255, 255);
   }
@@ -2890,12 +2892,12 @@ a {
   .container .main .team .team__container .team__card .team__card__img img {
     transform: translateX(5%);
     padding-top: 103px;
-    width: 596px;
-    height: 443px;
+    width: 684px;
+    height: 653px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
   .container .main .team .team__container .team__discription {
     width: 100%;
@@ -2974,7 +2976,7 @@ a {
   .container .main .methodology .methodology__container {
     width: 91.93%;
     position: relative;
-    max-width: none;
+    max-width: 744px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2993,7 +2995,7 @@ a {
     align-items: center;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum {
-    width: 684px;
+    width: 100%;
     height: 666px;
     display: flex;
     flex-direction: column;
@@ -3006,7 +3008,7 @@ a {
     padding-bottom: 0;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum p {
-    padding: 88px 0 0 79px;
+    padding: 88px 0 0 95px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -3052,7 +3054,7 @@ a {
     object-fit: cover;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban {
-    width: 684px;
+    width: 100%;
     height: 666px;
     margin-top: 24px;
     display: flex;
@@ -3066,7 +3068,7 @@ a {
     padding-bottom: 0;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban p {
-    padding: 88px 0 0 79px;
+    padding: 88px 0 0 95px;
     font-family: "Hauora";
     font-size: 18px;
     font-weight: 500;
@@ -3117,7 +3119,7 @@ a {
     justify-content: space-between;
     overflow: hidden;
     margin-top: 24px;
-    width: 684px;
+    width: 100%;
     height: 666px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
@@ -3365,7 +3367,7 @@ a {
   .container .main .cases .cases__container {
     position: relative;
     width: 91.93%;
-    max-width: none;
+    max-width: 744px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3393,7 +3395,7 @@ a {
   }
   .container .main .cases .cases__container .cases__box {
     padding: 40px 0 0 0;
-    width: 94.85%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -3407,7 +3409,7 @@ a {
     gap: 20px;
   }
   .container .main .cases .cases__container .cases__box .top .cases__indie {
-    width: 684px;
+    width: 100%;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3425,9 +3427,10 @@ a {
   }
   .container .main .cases .cases__container .cases__box .top .cases__indie .text .cases__indie__name {
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3435,9 +3438,10 @@ a {
     max-width: 420px;
     padding-top: 30px;
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3464,7 +3468,7 @@ a {
     height: 415px;
   }
   .container .main .cases .cases__container .cases__box .top .cases__buisnes {
-    width: 684px;
+    width: 100%;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3482,9 +3486,10 @@ a {
   }
   .container .main .cases .cases__container .cases__box .top .cases__buisnes .text .cases__buisnes__name {
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3493,9 +3498,10 @@ a {
     max-width: 420px;
     padding-top: 30px;
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3527,7 +3533,7 @@ a {
     gap: 20px;
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__startup {
-    width: 684px;
+    width: 100%;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3545,9 +3551,10 @@ a {
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__startup .text .cases__indie__name {
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3555,9 +3562,10 @@ a {
     max-width: 420px;
     padding-top: 30px;
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3576,7 +3584,7 @@ a {
     height: 415px;
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__interprise {
-    width: 684px;
+    width: 100%;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3594,9 +3602,10 @@ a {
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__interprise .text .cases__indie__name {
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3604,9 +3613,10 @@ a {
     max-width: 420px;
     padding-top: 30px;
     font-family: "Hauora";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 20.8px;
+    letter-spacing: 0.02em;
+    line-height: 23.4px;
     text-align: left;
     color: rgb(240, 246, 252);
   }
@@ -3657,7 +3667,7 @@ a {
   }
   .container .main .invitation .invitation__container {
     width: 91.93%;
-    max-width: 1120px;
+    max-width: 744px;
     display: flex;
     flex-direction: column;
   }
@@ -3813,7 +3823,7 @@ a {
   }
   .container .footer .footer__container {
     width: 91.93%;
-    max-width: none;
+    max-width: 744px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
