@@ -2643,8 +2643,8 @@ a {
     align-items: end;
     justify-content: end;
     width: 458px;
-    max-height: 426px;
-    background-size: 254px 236px;
+    height: 426px;
+    background-size: 458px 426px;
     -webkit-clip-path: inset(0 44% 0 0);
             clip-path: inset(0 44% 0 0);
     transform: translateX(44%);
@@ -2718,7 +2718,7 @@ a {
     opacity: 1;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img img {
-    width: 88.13%;
+    width: 597px;
     height: auto;
     border-bottom-right-radius: 20px;
     -o-object-fit: cover;
@@ -2781,7 +2781,7 @@ a {
     opacity: 1;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img img {
-    width: 88.13%;
+    width: 596px;
     height: auto;
     border-bottom-right-radius: 20px;
     -o-object-fit: cover;
@@ -2890,10 +2890,10 @@ a {
     display: flex;
   }
   .container .main .team .team__container .team__card .team__card__img img {
-    transform: translateX(5%);
+    transform: translateX(13.5%);
     padding-top: 103px;
     width: 684px;
-    height: 653px;
+    height: auto;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     -o-object-fit: fill;
@@ -2928,8 +2928,8 @@ a {
   .container .main .team .team__container .team__discription .team__discription__img .teamTop {
     width: 254px;
     height: 198.3px;
-    top: -77px;
-    left: -8px;
+    top: -115px;
+    left: 0px;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamTop.enter {
     opacity: 1;
@@ -2937,15 +2937,14 @@ a {
   .container .main .team .team__container .team__discription .team__discription__img .teamBottom {
     width: 226.35px !important;
     height: 159.51px !important;
-    left: 235px;
-    top: 7px;
+    left: 245px;
+    top: -32px;
   }
   .container .main .team .team__container .team__discription .team__discription__img .teamBottom.enter {
     opacity: 1;
   }
   .container .main .team .team__container::after {
     content: "";
-    display: flex;
     position: absolute;
     top: 1310px;
     left: 32px;
@@ -2957,7 +2956,6 @@ a {
   }
   .container .main .team .team__container.mobAnim::after {
     content: "";
-    display: flex;
     position: absolute;
     top: 1310px;
     left: 32px;
@@ -3047,7 +3045,7 @@ a {
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img img {
     padding-top: 64px;
-    width: 87.95%;
+    width: 597px;
     height: auto;
     border-bottom-right-radius: 20px;
     -o-object-fit: cover;
@@ -3107,7 +3105,7 @@ a {
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img img {
     padding-top: 64px;
-    width: 88.32%;
+    width: 596px;
     height: auto;
     border-bottom-right-radius: 20px;
     -o-object-fit: cover;
@@ -3394,7 +3392,7 @@ a {
     color: rgb(255, 255, 255);
   }
   .container .main .cases .cases__container .cases__box {
-    padding: 40px 0 0 0;
+    padding: 110px 0 0 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -3639,7 +3637,7 @@ a {
     content: "";
     position: absolute;
     left: 32px;
-    top: 2855px;
+    top: 2935px;
     width: 3px;
     height: 0px;
     background-image: url("../../public/images/mobLine.png");
@@ -3650,7 +3648,7 @@ a {
     content: "";
     position: absolute;
     left: 32px;
-    top: 2855px;
+    top: 2935px;
     width: 3px;
     height: 198px;
     background-image: url("../../public/images/mobLine.png");
@@ -3840,7 +3838,7 @@ a {
     height: 22.94px;
   }
   .container .footer .footer__container .footer__top .footer__newsletter {
-    margin-top: 97.06px;
+    margin-top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3864,6 +3862,96 @@ a {
   .container .footer .footer__container .footer__menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 50px 20px;
+    width: 100%;
+    margin-top: 62px;
+    margin-left: 0;
+  }
+  .container .footer .footer__container .footer__menu .footer__column {
+    display: flex;
+    flex-direction: column;
+    width: 156px;
+  }
+  .container .footer .footer__container .footer__menu .footer__column .footer__column__title {
+    font-family: "Hauora";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-bottom: 42.54px;
+  }
+  .container .footer .footer__container .footer__menu .footer__column .footer__column__item {
+    margin-top: 8px;
+    font-family: "Hauora";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+    text-align: left;
+    color: rgb(112, 111, 146);
+  }
+}
+@media (max-width: 730px) {
+  .container .main .invitation .invitation__container .invitation__search {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .main .invitation .invitation__container .invitation__search .invitation__button {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .container .footer {
+    background: linear-gradient(180deg, rgb(6, 5, 34), rgb(8, 7, 52));
+    padding-top: 120px;
+    padding-bottom: 109.46px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .footer .footer__container {
+    width: 80%;
+    max-width: 744px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  .container .footer .footer__container .footer__top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: unset;
+    align-items: end;
+  }
+  .container .footer .footer__container .footer__top .footer__logo {
+    width: 137px;
+    height: 22.94px;
+  }
+  .container .footer .footer__container .footer__top .footer__newsletter {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(52, 59, 67);
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Hauora";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 16.8px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+  }
+  .container .footer .footer__container .footer__top .footer__newsletter:hover {
+    box-shadow: 0px 0px 26.39px 0px rgb(17, 14, 104);
+  }
+  .container .footer .footer__container .footer__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px 20px;
     width: 100%;
     margin-top: 62px;
@@ -4297,7 +4385,7 @@ a {
   }
   .container .main .hosting .hosting__container .hosting__title {
     padding: 0 30px;
-    max-width: 345px;
+    max-width: 80%;
     padding-top: 118px;
     font-family: "Hauora";
     font-size: 25px;
@@ -4502,6 +4590,7 @@ a {
   }
   .container .main .team .team__container .team__title {
     padding: 0 30px;
+    max-width: 80%;
     font-family: "Hauora";
     font-size: 25px;
     font-weight: 500;
@@ -4511,6 +4600,7 @@ a {
   }
   .container .main .team .team__container .team__slogan {
     padding: 20px 30px 0 30px;
+    max-width: 80%;
     font-family: "Hauora";
     font-size: 16px;
     font-weight: 500;
@@ -4778,6 +4868,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: visible;
     margin-top: 24px;
     width: 94.87%;
     height: 510px;
@@ -4837,8 +4928,8 @@ a {
   .container .main .methodology .methodology__container::after {
     content: "";
     position: absolute;
-    left: 62px;
-    top: 1770px;
+    left: 57px;
+    top: 1616px;
     width: 3px;
     height: 0px;
     background-image: url(../../public/images/mobLine.png);
@@ -4848,8 +4939,8 @@ a {
   .container .main .methodology .methodology__container.mobAnim::after {
     content: "";
     position: absolute;
-    left: 62px;
-    top: 1770px;
+    left: 57px;
+    top: 1616px;
     width: 3px;
     height: 267px;
     background-image: url(../../public/images/mobLine.png);
@@ -4991,6 +5082,7 @@ a {
   }
   .container .main .cases .cases__container .cases__title {
     padding: 0 30px;
+    max-width: 80%;
     font-family: "Hauora";
     font-size: 25px;
     font-weight: 500;
@@ -5000,6 +5092,7 @@ a {
   }
   .container .main .cases .cases__container .cases__slogan {
     padding: 0 30px;
+    max-width: 80%;
     margin-top: 20px;
     font-family: "Hauora";
     font-size: 16px;
@@ -5245,8 +5338,8 @@ a {
   .container .main .cases .cases__container::after {
     content: "";
     position: absolute;
-    left: 62px;
-    top: 2215px;
+    left: 57px;
+    top: 2325px;
     width: 3px;
     height: 0px;
     background-image: url("../../public/images/mobLine.png");
@@ -5256,8 +5349,8 @@ a {
   .container .main .cases .cases__container.mobAnim::after {
     content: "";
     position: absolute;
-    left: 62px;
-    top: 2215px;
+    left: 57px;
+    top: 2325px;
     width: 3px;
     height: 198px;
     background-image: url("../../public/images/mobLine.png");
@@ -5394,6 +5487,7 @@ a {
   .container .footer .footer__container .footer__menu .footer__column {
     display: flex;
     flex-direction: column;
+    width: unset;
   }
   .container .footer .footer__container .footer__menu .footer__column .footer__column__title {
     font-family: "Hauora";

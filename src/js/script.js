@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if ((pageYOffset > animLineOffset - lineAnimPoint) && pageYOffset < (animLineOffset + animLineHeight)) {               
                     animLine.classList.add("mobAnim");
                 }
+              
             };
         }
     } 
