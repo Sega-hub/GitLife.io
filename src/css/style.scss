@@ -74,12 +74,13 @@ $width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
     background-color: rgb(7, 7, 7);
     border-radius: 20px;
     border: 1px solid $COLOR_DARK_GRAY;
     padding-bottom: 1px;
     p {
-        padding: 80px 0 0 95px;
+        padding: 88px 0 0 79px;
         font-family: "Hauora";
         font-size: 18px;
         font-weight: 500;
@@ -1782,7 +1783,7 @@ $width: 80%;
         max-width: 100%;
     }
 
-    $width: 84.61%;
+    $width: 91.93%;
     .container {
         .header {
             width: 100vw;
@@ -1833,258 +1834,266 @@ $width: 80%;
         }
         .main {           
             .offer {
-                padding-top: 250px;
-                background: linear-gradient(180deg, rgba(10, 9, 67, 0.5), rgb(0, 0, 0) 100%);
+                position: relative;
+                width: 100%;
+                @include center();
+                background-image: linear-gradient(rgb(10, 9, 67, 0.8) 10%, rgb(0, 0, 0));
+                background-blend-mode: overlay; 
+                background-position: center;
+                aspect-ratio: 16/9;
                 .offer__video {
                     position: absolute;
-                    top: -30px;
+                    top: 0;
                     left: 0;
                     width: 100%;
-                    height: 100%;
-                    -o-object-fit: cover;
-                    z-index: -1;
-                    object-fit: cover;
+                    height: 60%;
+                    object-fit: cover; 
+                    z-index: -1; 
                 }
                 .offer__container {
-                    padding-top: 0;
+                    padding-top: 495px;
                     width: $width;
-                    display: flex;
-                    align-items: start;
+                    @include center();
                     flex-direction: column;
                     .offer__buttons {
-                       display: none;                      
+                        width: 100%;
+                        @include center();
+                        .offer__button {
+                            margin-left: 30px;
+                            &:nth-child(1) {
+                                margin-left: 0;
+                                @include button(70px, rgba(7, 6, 45, 1), rgba(13, 10, 103, 1));
+                            }
+                            &:nth-child(2) {
+                                @include button(119px, rgba(7, 6, 45, 1), rgba(13, 10, 103, 1));
+                            }
+                            &:nth-child(3) {
+                                @include button(99px, rgba(7, 6, 45, 1), rgba(13, 10, 103, 1));
+                            }
+                        }
                     }
                     .offer__title {
-                        display: flex;
-                        width: 100%;
-                        font-family: "Hauora";
-                        font-size: 25px;
-                        font-weight: 500;
-                        letter-spacing: 0.03em;
-                        line-height: 25px;
-                        text-align: left;
-                        color: $COLOR_LIGHT_WHITE;
-                        padding-top: 25px;                       
                         br {
                             display: none;
                         }
+                        width: 100%;
+                        margin-top: 35px;
+                        font-family: "Hauora";
+                        font-size: $FONT_SIZE_40;
+                        font-weight: 500;
+                        letter-spacing: 0.03em;
+                        line-height: 40px;
+                        text-align: center;
+                        color: $COLOR_LIGHT_WHITE;
+                        opacity: 0;
+                        animation: mainTitle 2s ease 0.5s;
+                        animation-fill-mode: forwards;
                     }
                     .offer__discription {
-                        margin-top: 30px;
-                        display: flex;
-                        align-items: center;
+                        margin-top: 35px;
+                        @include center();
                         flex-direction: column;
+                        opacity: 0;
+                        animation: mainTitle 2s ease 1s;
+                        animation-fill-mode: forwards;
                         .offer__info {
                             font-family: "Hauora";
-                            font-size: 16px;
+                            font-size: $FONT_SIZE_16;
                             font-weight: 500;
                             letter-spacing: 0.03em;
                             line-height: 20.8px;
                             text-align: center;
-                            br {
-                                display: none;
-                            }
+                            color: $COLOR_GRAY;
                         }
                         .offer__slogan {
+                            padding-top: 8px;
                             font-family: "Hauora";
-                            font-size: 16px;
+                            font-size: $FONT_SIZE_16;
                             font-weight: 500;
                             letter-spacing: 0.03em;
                             line-height: 20.8px;
-                            text-align: left;
+                            text-align: center;
                             color: $COLOR_WHITE;
                         }
                     }
                     .offer__search {
-                        padding-top: 70px;
+                        padding-top: 114px;
                         width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: start;
-                        justify-content: center;
-                        .form {                            
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: start;
-                            justify-content: center;
-                            max-width: none;
-                            height: auto;
-                            border: none;
-                            border-radius: 0;
-                            &:hover {
-                                box-shadow: none;
-                            }
-                            .offer__search__input {
-                                width: 95.8%;
-                                height: 42px;
-                                border-radius: 10px;
-                                padding-left: 0; 
-                                &[type="text"] {
-                                  padding-left: 15px;
-                                }
-                            }
-                            .offer__search__button {
-                                margin-top: 20px;
-                                width: 100%;
-                                height: 42px;
-                                box-sizing: border-box;
-                                padding: 10px 25px 10px 25px;
-                                border-radius: 10px;
-                                border: 1px solid rgba(3, 16, 180, 1);
-                                &:hover {
-                                    box-shadow: 0px 0px 26.39px 0px rgba(3, 16, 180, 1);
-                                }     
-                            } 
+                        @include center();
+                        .form {
+                            @include input();
                         }
                     }
                     .offer__partners {
-                        padding-top: 93px;
+                        padding-top: 207px;
                         width: 100%;
-                        max-width: none;
+                        max-width: 978px;
                         display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center; 
+                        justify-content: space-between;
                         align-items: center;
-                        gap: 25px 0;                     
                         img {
-                            display: block;
-                            margin: auto;
                             &:nth-child(1) {
                                 width: 94px;
-                                height: 40px;   
-                                order: 1;               
+                                height: 40px;                            
                             }
                             &:nth-child(2) {
                                 width: 100px;
-                                height: 40px;  
-                                order: 2;                      
+                                height: 40px;                            
                             }
                             &:nth-child(3) {
                                 width: 136px;
-                                height: 36px;  
-                                order: 4;                 
+                                height: 36px;                            
                             }
                             &:nth-child(4) {
                                 width: 56px;
-                                height: 38px;  
-                                order: 3;      
+                                height: 38px;                            
                             }
                             &:nth-child(5) {
                                 width: 91px;
-                                height: 40px; 
-                                order: 5;             
+                                height: 40px;                            
                             }
                         }
                     }
                 }
-            }        
+            }       
             .openspace {
-                padding-top: 120px;            
-                padding-bottom: 105px;
+                padding-top: 282px;            
+                padding-bottom: 174px;
                 position: relative;
                 background-color: rgb(0, 0, 0);
                 width: 100%;
                 @include center();                 
                 .openspace__container {
-                    max-width: none;
+                    max-width: 1120px;
                     width: $width;
-                    align-items: center;
+                    @include center();
+                    flex-direction: column;
                     .openspace__title {
                         font-family: "Hauora";
-                        font-size: 25px;
+                        font-size: $FONT_SIZE_40;
                         font-weight: 500;
-                        line-height: 25px;
+                        letter-spacing: 0.03em;
+                        line-height: 40px;
                         text-align: center;
                         color: $COLOR_WHITE; 
+                        opacity: 0;
+                        transition: all 1s ease 0s;
+                        &.appearance {
+                            opacity: 1;
+                        }
                         span {
                             color: rgba(68, 63, 219, 1);
                         }                   
                     }
                     .openspace__discription {
-                        br {
-                            display: none;
-                        }
-                        max-width: 500px;
-                        padding-top: 30px;
-                        font-family: "Hauora";                       
-                        font-size: 16px;
+                        padding-top: 50px;
+                        font-family: "Hauora";
+                        font-size: $FONT_SIZE_16;
                         font-weight: 500;
+                        letter-spacing: 0.03em;
                         line-height: 20.8px;
                         text-align: center;
                         color: $COLOR_WHITE;
-                        z-index: 100;
+                        opacity: 0;
+                        transition: all 1s ease 0.5s;
+                        &.appearance {
+                            opacity: 1;
+                        }  
                         span {
                             color: $COLOR_GRAY;
                         }
                     }
-                    .openspace__variation { 
-                        padding-top: 60px;
-                        width: 100%;
-                        display: grid;                        
+                    .openspace__variation {
+                        padding-top: 82px;
+                        display: flex;
                         justify-content: space-between;
-                        gap: 35px;
-                        grid-template-columns: repeat(2, 1fr);
-                        &:nth-child(1) {
-                            order: 2;
-                        }
-                        &:nth-child(2) {
-                            order: 1;
-                        }
-                        &:nth-child(3) {
-                            order: 3;
-                        }
-                        br.mob {
-                            display: flex;
-                        }
                         .openspace__variation__mob {
-                            width: 84.61%;
-                            padding-top: 10px;
-                            display: flex;
-                            flex-direction: column;
-                            .openspace__cursor__mob {
-                                background-color: black;
-                                position: relative;
-                                width: 100vw;
-                                max-width: 100%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            
-                                .white__mob, .black__mob, .openspace__cursor__circle__mob, .openspace__cursor__ball__mob {
-                                   display: none;
-                                }
-                            
-                                .openspace__video__mob {
-                                    width: 100vw;
-                                    mix-blend-mode: screen;  
-                                }
-                            }
-                            .openspace__variation__mob__list {
-                                margin-top: 10px;
-                                display: flex;                        
-                                justify-content: space-around;
-                                gap: 20px;
-                                grid-template-columns: repeat(2, 1fr);
-                                .openspace__categories {
-                                    display: flex;
-                                    min-width: 0 !important;
-                                    max-width: 200px !important;
-                                    .openspace__categories-item {
-                                        min-width: 150px !important;
-                                        max-width: 200px !important;
-                                    }
-                                }
-                            }
+                            display: none;
                         }
                         .openspace__categories {
-                            display: none;
+                            display: flex;
+                            flex-direction: column;
+                            padding-top: 41px;                        
+    
+                            .openspace__categories-item {
+                                min-width: 183px;
+                                margin-top: 44px;
+                                font-family: "Hauora";
+                                font-size: $FONT_SIZE_16;
+                                font-weight: 500;
+                                letter-spacing: 0.03em;
+                                line-height: 16px;
+                                text-align: left;
+                                color: $COLOR_GRAY;
+                                transition: 0.5s;
+                                z-index: 11;
+                                cursor: pointer;
+                                &:hover {
+                                    color: $COLOR_WHITE;
+                                }
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
                         }
                         .openspace__cursor {
-                            display: none;
+                            background-color: black;
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        
+                            .white, .black, .openspace__video, .openspace__cursor__circle, .openspace__cursor__ball {
+                                position: absolute;
+                            }
+                        
+                            .white {
+                                width: 100%;
+                                height: 500px;
+                                background-color: #CCCCCC;
+                                mix-blend-mode: color-dodge;
+                                z-index: 10;
+                            }
+                        
+                            .black {
+                                width: 100vw;
+                                height: 500px;
+                                background-color: #323232;
+                                mix-blend-mode: color-burn;
+                                z-index: 9;
+                            }
+                        
+                            .openspace__video {
+                                width: 100%;
+                                mix-blend-mode: screen;
+                                filter: blur(25px);
+                                z-index: 8;
+                            }
+                        
+                            .openspace__cursor__circle {
+                                width: 250px;
+                                height: 250px;
+                                background: $COLOR_WHITE;
+                                border-radius: 60%;
+                                animation: morphing 8s infinite linear;
+                                filter: blur(30px);
+                                z-index: 7;
+                            }
+                        
+                            .openspace__cursor__ball {
+                                width: 120px;
+                                height: 120px;
+                                border-radius: 50%;
+                                background-color: blue;
+                                transition: all 1s ease;
+                                animation: morphing 4s infinite reverse;
+                                filter: blur(25px);
+                                z-index: 6;
+                            }
                         }
+                        
                     }
-                   
                 }
             }
             .advantages {               
@@ -2117,7 +2126,7 @@ $width: 80%;
                     br {
                         display: none;
                     }
-                    width: $width;
+                    max-width: 508px;
                     margin-top: 30px;
                     font-family: "Hauora";
                     font-size: $FONT_SIZE_16;
@@ -2136,37 +2145,42 @@ $width: 80%;
                 background: linear-gradient(180deg, rgba(0, 0, 0, 1) 40% , rgb(8, 7, 56) 100%);
                 .hosting__container {
                     position: relative;
-                    width: 100%;                
+                    width: $width;                
                     max-width: none;
                     .hosting__title {
-                        padding: 0 30px;
-                        max-width: 345px;
+                        padding: 0;
+                        width: 100%;
                         padding-top: 118px;
                         font-family: "Hauora";
-                        font-size: 25px;
+                        font-size: 35px;
                         font-weight: 500;
-                        line-height: 32.5px;
+                        line-height: 47.81px;
                         text-align: left;
                         color: $COLOR_WHITE;
                         span {
                             color: rgba(68, 63, 219, 1);
-                        }                                          
+                        }                
+                        .planshet {
+                            display: none;
+                        }                          
                     }    
                     .hosting__content {
-                        padding: 40px 10px 0 10px;
-                        width: 94.87%;
+                        padding-top: 100px;
+                        width: 100%;
                         @include center();
                         flex-direction: column;
                         .hosting__code {                        
                             position: relative;
                             display: flex;
                             flex-direction: column;
+                            justify-content: space-between;
                             background-color: #060606;
-                            width: 100%;
+                            width: 684px;
+                            height: 666px;
                             border-radius: 20px;
                             border: 1px solid $COLOR_DARK_GRAY;
-                            background-size: 1121px 600px;
-    
+                            background-size: 1121px 666px;                            
+                            overflow: hidden;  
                             &.show {
                                 background-image: url("../../public/images/hostingBack.png");
                             }
@@ -2196,47 +2210,48 @@ $width: 80%;
                                 }
                             }
                             .hosting__code__big {
-                                display: flex;
-                                justify-content: end;
-                                img {
-                                    z-index: 2;
-                                    opacity: 0;
-                                    transition: all 1s ease 0.5s;
-                                    &.show {
-                                        opacity: 1;
-                                    }
-                                }
-                                
+                                display: none;                               
+                            }
+                            .hosting__code__images {
+                                display: flex; 
+                                justify-content: end; 
+                                width: 100%; 
+                                z-index: 10;
                                 &::before {
                                     content: "";
                                     position: relative;
-                                    background-image: url("../../public/images/hostingBranch.svg");                               
-                                    width: 284px;
-                                    height: 140px;
-                                    background-size: 284px 140px;
-                                    top: 165px;  
-                                    transition: all 2s ease 1s;   
-                                    opacity: 0;                          
+                                    background-image: url(../../public/images/hostingMobBranch.png);
+                                    width: 154px;
+                                    height: 142px;
+                                    background-size: 154px 142px;
+                                    top: 165px;
+                                    left: 200px;
+                                    transition: all 1.5s ease 0s;
+                                    opacity: 0;                                    
                                 }
-                                &.show::before{
+                                &.show {
                                     opacity: 1;
-                                }
-                            }
-                            .hosting__code__images {
-                                display: flex;   
-                                justify-content: center;   
-                                width: 100%; 
-                                z-index: 10;
+                                    &::before {
+                                        opacity: 1;
+                                    }
+                                } 
                                 .hosting__img__mini {
-                                    display: none;
-                                }              
-                               img {
-                                    width: 100%;
-                                    height: auto;
+                                    display: flex;
+                                    align-items: end;
+                                    justify-content: end;
+                                    width: 458px;
+                                    max-height: 426px;
+                                    background-size: 254px 236px;
+                                    clip-path: inset(0 44% 0 0);
+                                    transform: translateX(44%); 
                                     border-bottom-right-radius: 20px;
-                                    border-bottom-left-radius: 20px;
-                                    object-fit: contain;
-                               }
+                                    opacity: 0;
+                                    transition: all 2s ease 0.5s;
+                                    &.show {
+                                        opacity: 1;
+                                    }
+                               
+                                }    
     
                             }
                             
@@ -2244,10 +2259,12 @@ $width: 80%;
                         .hosting__grid {
                             padding-top: 24px;
                             width: 100%;
-                            display: grid;
-                            grid-template-columns: repeat(2, 48.92%);
-                            gap: 0 24px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
                            .hosting__grid__branch {
+                                width:684px;
+                                height: 666px;
                                 @include card();                           
                                 padding-bottom: 0;
                                 p {
@@ -2261,7 +2278,7 @@ $width: 80%;
                                     justify-content: end;
                                     width: 100%;
                                     z-index: 10;
-                                    padding-top: 0px;
+                                    padding-top: 60px;
                                     translate: 70px;
                                     opacity: 0;
                                     transition: 1s ease 0.2s;
@@ -2278,6 +2295,9 @@ $width: 80%;
                                 }
                            }
                            .hosting__grid__manage {
+                                width:684px;
+                                height: 666px;
+                                margin-top: 24px;
                                 @include card();                         
                                 padding-bottom: 0;
                                 p {
@@ -2290,7 +2310,7 @@ $width: 80%;
                                     display: flex;
                                     justify-content: end;
                                     width: 100%;
-                                    padding-top: 59px;
+                                    padding-top: 60px;
                                     z-index: 10;
                                     translate: 70px;
                                     opacity: 0;
@@ -2312,8 +2332,8 @@ $width: 80%;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 62px;
-                        top: 1840px;
+                        left: 32px;
+                        top: 2380px;
                         width: 3px;
                         height: 0px;
                         background-image: url(../../public/images/mobLine.png);
@@ -2323,8 +2343,8 @@ $width: 80%;
                     &.mobAnim::after {
                         content: "";
                         position: absolute;
-                        left: 62px;
-                        top: 1840px;
+                        left: 32px;
+                        top: 2380px;
                         width: 3px;
                         height: 246px;
                         background-image: url(../../public/images/mobLine.png);
@@ -2340,23 +2360,28 @@ $width: 80%;
                 .team__container {                
                     padding-top: 225px;
                     position: relative;
-                    width: 100%;
+                    width: $width;
                     max-width: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     .team__title {
-                        padding: 0 30px;
+                        width: 100%;
+                        padding: 0;
                         font-family: "Hauora";
-                        font-size: 25px;
+                        font-size: 35px;
                         font-weight: 500;
-                        line-height: 34.15px;
+                        line-height: 47.81px;
                         text-align: left;
                         color: rgba(68, 63, 219, 1);
                     }
                     .team__slogan {  
-                        padding: 20px 30px 0 30px;                        
+                        width: 100%;
+                        padding: 20px 0 0 0;                        
                         font-family: "Hauora";
-                        font-size: 16px;
+                        font-size: 18px;
                         font-weight: 500;
-                        line-height: 20.8px;
+                        line-height: 23.4px;
                         text-align: left;
                         color: $COLOR_WHITE;
                     }
@@ -2364,10 +2389,11 @@ $width: 80%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        width: 94.87%;
-                        margin: 0 10px;
-                        height: 510px;
+                        overflow: hidden;
+                        width: 684px;
+                        margin: 0;
                         margin-top: 40px;
+                        height: 653px;
                         border-radius: 20px;
                         background-color: rgb(6, 6, 6);
                         border: 1px solid rgb(73, 73, 73);
@@ -2375,8 +2401,8 @@ $width: 80%;
                             br {
                                 display: none;
                             }
-                            max-width: 317px;
-                            padding: 60px 0 0 20px;
+                            max-width: 375px;
+                            padding: 80px 0 0 88px;
                             font-family: "Hauora";
                             font-size: $FONT_SIZE_16;
                             font-weight: 500;
@@ -2397,15 +2423,16 @@ $width: 80%;
                                 opacity: 1;
                             }
                             .team__img__big{
-                                display: flex;
-                            }
-                            .team__img__mini{
                                 display: none;
                             }
+                            .team__img__mini{
+                                display: flex;
+                            }
                             img {       
+                                transform: translateX(5%);
                                 padding-top: 103px;                       
-                                width: 100%;
-                                height: 284.53px;
+                                width: 596px;
+                                height: 443px;
                                 border-bottom-right-radius: 20px;
                                 border-bottom-left-radius: 20px;
                                 object-fit: cover;
@@ -2417,11 +2444,12 @@ $width: 80%;
                         display: flex;
                         flex-direction: column-reverse;
                         .team__discription-text {                         
-                            padding: 60px 30px 0 30px;
+                            max-width: 420px;
+                            padding: 26px 0 0 0;
                             font-family: "Hauora";
-                            font-size: $FONT_SIZE_16;
+                            font-size: $FONT_SIZE_18;
                             font-weight: 500;
-                            line-height: 20.8px;
+                            line-height: 23.4px;
                             text-align: left;
                             color: $COLOR_WHITE;
                             br {
@@ -2460,8 +2488,8 @@ $width: 80%;
                         content: "";
                         display: flex;
                         position: absolute;
-                        top: 1184px;
-                        left: 62px;
+                        top: 1310px;
+                        left: 32px;
                         width: 3px;
                         height: 0px;
                         background-image: url(../../public/images/mobLine.png);
@@ -2472,8 +2500,8 @@ $width: 80%;
                         content: "";
                         display: flex;
                         position: absolute;
-                        top: 1184px;
-                        left: 62px;
+                        top: 1310px;
+                        left: 32px;
                         width: 3px;
                         height: 214px;
                         background-image: url(../../public/images/mobLine.png);
@@ -2485,47 +2513,30 @@ $width: 80%;
             .methodology {
                 padding-top: 200px;
                 width: 100%;
-                @include center();
+                display: flex;
                 background: linear-gradient(180deg, rgb(5, 4, 30), rgb(4, 4, 6) 100%);
                 .methodology__container {
-                    width: 100%;
+                    width: $width;
                     position: relative;
                     max-width: none;
-                    @include center();
+                    display: flex;
                     flex-direction: column;
+                    align-items: center;
                     .methodology__title {
-                        width: $width;
-                        font-family: "Hauora";
-                        font-size: 25px;
-                        font-weight: 500;
-                        line-height: 34.15px;
-                        text-align: left;
-                        color: $COLOR_WHITE;
-                        span {
-                            color: rgba(68, 63, 219, 1);
-                        }
+                        display: none;
                     }
                     .methodology__slogan {
-                        width: $width;
-                        padding-top: 20px;
-                        font-family: "Hauora";
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 20.8px;
-                        text-align: left;
-                        color: $COLOR_WHITE;
-                        max-width: 330px;
-                        br {
-                            display: none;
-                        }
+                        display: none;
                     }
                     .methodology__grid {
-                        padding-top: 108px;
+                        padding-top: 83px;
                         width: 100%;
-                        display: grid;
-                        grid-template-columns: repeat(2, 48.92%);
-                        gap: 0 24px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         .methodology__grid__scrum {
+                            width: 684px;
+                            height: 666px;
                             @include card();
                             padding-bottom: 0;
                             p {
@@ -2554,6 +2565,9 @@ $width: 80%;
                             }
                         }
                         .methodology__grid__kanban {
+                            width: 684px;
+                            height: 666px;
+                            margin-top: 24px;
                             @include card();
                             padding-bottom: 0;
                             p {
@@ -2586,15 +2600,16 @@ $width: 80%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+                        overflow: hidden;
                         margin-top: 24px;
-                        width: 100%;
-                        height: 653px;
+                        width: 684px;
+                        height: 666px;
                         border-radius: 20px;
                         border: 1px solid rgba(73, 73, 73, 1);
                         background-color: #060606;  
-                        background-size: 1120px 653px;                 
+                        background-size: 1120px 666px;                 
                         &.show {
-                            background-image: url("../../public/images/methodologyBack.png");
+                            background-image: url("../../public/images/methodologyBackPlanshet.png");
                         }
                         .methodology__connection__discription {
                             max-width: 330px;
@@ -2636,6 +2651,7 @@ $width: 80%;
                                     width: 430px;
                                     height: 405px;
                                     background-size: 430px 405px;
+                                    transform: translateX(45%);
                                     &.show {
                                         opacity: 1;
                                     }
@@ -2646,7 +2662,7 @@ $width: 80%;
                                     height: 230px;
                                     background-size: 294px 230px;
                                     top: -212px;
-                                    left: 268px;
+                                    left: 440px;
                                     opacity: 0;
                                     z-index: 12;
                                     transition: all 1s ease 1s;                                         
@@ -2662,8 +2678,8 @@ $width: 80%;
                                     background-image: url("../../public/images/methodologyBranch.png");
                                     width: 151px; 
                                     height: 124px;
-                                    top: -135px;                                                              
-                                    left: 292px;
+                                    top: -140px;                                                              
+                                    left: 440px;
                                     transition: all 3s ease 1.5s;
                                     background-size: 151px 124px;
                                     opacity: 0;
@@ -2683,149 +2699,96 @@ $width: 80%;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 62px;
-                        top: 1770px;
+                        left: 50%;
+                        top: 2125px;
                         width: 3px;
                         height: 0px;
                         background-image: url(../../public/images/mobLine.png);
                         background-repeat: no-repeat;
                         background-size: 3px 267px;
+                        transform: translateX(50%);
                     }
                     &.mobAnim::after {
                         content: "";
                         position: absolute;
-                        left: 62px;
-                        top: 1770px;
+                        left: 50%;
+                        top: 2125px;
                         width: 3px;
                         height: 267px;
                         background-image: url(../../public/images/mobLine.png);
                         background-repeat: no-repeat;
                         background-size: 3px 267px;
+                      
                     }
                 }           
             }
             .possibilities {
                 background-color: rgb(4, 4, 6);
-                padding-top: 287px;
+                padding-top: 281px;
                 width: 100%;
                 @include center();
                 .possibilities__container {
-                    width: $width;
-                    position: relative;
-                    align-items: start;
+                    width: 80%;
+                    @include center();
+                    flex-direction: column;
                     .possibilities__title {
                         font-family: "Hauora";
-                        font-size: 25px;
+                        font-size: $FONT_SIZE_40;
                         font-weight: 500;
-                        line-height: 25px;
-                        text-align: left;                        
+                        letter-spacing: 0.03em;
+                        line-height: 40px;
+                        text-align: center;
                         color: $COLOR_WHITE;
+                        opacity: 0;
+                        transition: all 1s ease 0s;
+                        &.appearance {
+                            opacity: 1;
+                        }
                         span {
                             color: rgba(68, 63, 219, 1);
                         }
                     }
                     .possibilities__invite {
-                        padding-top: 60px;
+                        padding-top: 80px;
+                        @include center();
                         flex-direction: column;
-                        align-items: start;
                         width: 100%;
                         label {
-                            width: auto;
+                            width: 483px;
                             display: flex;
-                            justify-content: center;
+                            justify-content: start;
                             font-family: "Hauora";
-                            font-size: 16px;
+                            font-size: $FONT_SIZE_16;
                             font-weight: 500;
+                            letter-spacing: 0.03em;
                             line-height: 20.8px;
                             text-align: left;
                             color: $COLOR_GRAY
                         }
                         .possibilities__form {
                             margin-top: 9px;
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: start;
-                            justify-content: center;
-                            max-width: none;
-                            height: auto;
-                            border: none;
-                            border-radius: 0;
-                            &:hover {
-                                box-shadow: none;
-                            }
-                            input {
-                                width: 96.45%;
-                                height: 42px;
-                                border-radius: 10px;
-                                &[type=text] {
-                                    padding-left: 15px;
-                                }
-                                font-size: 14px;
-                                font-weight: 500;
-                                line-height: 19.6px;
-                                text-align: left;
-                                letter-spacing: none;   
-                                &::placeholder {
-                                    font-family: "Hauora";
-                                    font-size: 14px;
-                                    font-weight: 500;
-                                    line-height: 19.6px;
-                                    text-align: left;                                    
-                                }
-                            }
+                            @include input();
                             .possibilities__form__button {
-                                margin-top: 20px;
-                                width: 100%;
+                                width: 138px;
                                 height: 42px;
-                                box-sizing: border-box;
-                                padding: 10px 25px 10px 25px;
-                                border-radius: 10px;
-                                border: 1px solid rgb(3, 16, 180);
-                                &:hover {
-                                    box-shadow: 0px 0px 26.39px 0px rgb(3, 16, 180);
-                                }
                             }
                         }
-                    }  
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        left: 33px;
-                        top: 215px;
-                        width: 3px;
-                        height: 0px;
-                        background-image: url("../../public/images/mobLine.png");
-                        background-repeat: no-repeat;
-                        background-size: 3px 267px;
-                        transition: 1s;
-                    }   
-                    &.mobAnim::after {
-                        content: "";
-                        position: absolute;
-                        left: 33px;
-                        top: 215px;
-                        width: 3px;
-                        height: 267px;
-                        background-image: url("../../public/images/mobLine.png");
-                        background-repeat: no-repeat;
-                        background-size: 3px 267px;
-                    }   
+                    }               
                 }
             }
             .cases {
                 background: linear-gradient(180deg, rgb(4, 4, 6), rgb(3, 3, 22));
-                padding-top: 255px;
+                padding-top: 210px;
                 width: 100%;
                 @include center();
                 .cases__container {
                     position: relative;
-                    width: 100%;
+                    width: $width;
                     max-width: none;
                     display: flex;
                     flex-direction: column;
                     .cases__title {
-                        padding: 0 30px;
+                        padding: 0px;
                         font-family: "Hauora";
                         font-size: 25px;
                         font-weight: 500;
@@ -2834,7 +2797,7 @@ $width: 80%;
                         color: rgba(68, 63, 219, 1);                    
                     }
                     .cases__slogan {
-                        padding: 0 30px;
+                        padding: 0;
                         margin-top: 20px;
                         font-family: "Hauora";
                         font-size: 16px;
@@ -2844,7 +2807,7 @@ $width: 80%;
                         color: $COLOR_WHITE;
                     }
                     .cases__box {
-                        padding: 40px 10px 0 10px;
+                        padding: 40px 0 0 0;
                         width: 94.85%;
                         display: flex;  
                         flex-direction: column;                  
@@ -2853,11 +2816,13 @@ $width: 80%;
                         .top {
                             width: 100%;
                             display: flex;
-                            flex-direction: column;                        
+                            flex-direction: column;  
+                            align-items: center;                      
                             gap: 20px;
                             .cases__indie {     
-                                width: 100%; 
-                                max-height: 485px;
+                                width: 684px;
+                                height: 666px;
+                                max-height: none;
                                 box-sizing: border-box;                                        
                                 display: flex;
                                 align-items: start;
@@ -2866,7 +2831,7 @@ $width: 80%;
                                 background-color: #060606;
                                 border: 1px solid rgba(73, 73, 73, 1);
                                 .text {
-                                    padding: 60px 0 0 20px;
+                                    padding: 88px 0 0 84px;
                                     position: relative;
                                     z-index: 10;
                                     .cases__indie__name {
@@ -2877,12 +2842,14 @@ $width: 80%;
                                         text-align: left;                                        
                                         color: $COLOR_LIGHT_WHITE;                            
                                     }
-                                    .cases__indie__discription {
-
+                                    .cases__indie__discription {   
                                         br {
                                             display: none;
-                                        }
-                                        max-width: 285px;
+                                        }    
+                                        .planshet {
+                                            display: flex;
+                                        }                               
+                                        max-width: 420px;
                                         padding-top: 30px;
                                         font-family: "Hauora";
                                         font-size: 16px;
@@ -2905,14 +2872,15 @@ $width: 80%;
                                     margin-top: -4px;
                                     padding-bottom: 4px;
                                     .video {
-                                        width: 270px;
-                                        height: 270px;                                    
+                                        width: 415px;
+                                        height: 415px;                                    
                                     }
                                 }
                             }
                             .cases__buisnes {
-                                width: 100%;
-                                height: 510px;
+                                width: 684px;
+                                height: 666px;
+                                max-height: none;
                                 box-sizing: border-box;  
                                 display: flex;
                                 align-items: start;
@@ -2922,24 +2890,27 @@ $width: 80%;
                                 border: 1px solid rgba(73, 73, 73, 1);
                                 
                                 .text {
-                                    padding: 60px 0 0 20px;
+                                    padding: 88px 0 0 84px;
+                                    position: relative;
+                                    z-index: 10;
                                     .cases__buisnes__name {
                                         font-family: "Hauora";
                                         font-size: 16px;
                                         font-weight: 500;
                                         line-height: 20.8px;
                                         text-align: left;                                        
-                                        color: $COLOR_LIGHT_WHITE;
+                                        color: $COLOR_LIGHT_WHITE;                            
                                     }
-                                    .cases__buisnes__discription {
+                                    .cases__buisnes__discription {  
                                         br {
                                             display: none;
                                         }
                                         .mob {
                                             display: flex;
                                         }
-                                        max-width: 330px;
-                                        padding-top: 40px;
+                                        max-width: 420px;        
+                                        max-width: 420px;
+                                        padding-top: 30px;
                                         font-family: "Hauora";
                                         font-size: 16px;
                                         font-weight: 500;
@@ -2948,7 +2919,7 @@ $width: 80%;
                                         color: $COLOR_LIGHT_WHITE;
                                         span {
                                            color: rgba(120, 119, 146, 1);
-                                        }   
+                                        }
                                     }
                                 }
                                
@@ -2959,8 +2930,8 @@ $width: 80%;
                                     display: flex;
                                     justify-content: center;
                                     .video {
-                                        width: 270px;
-                                        height: 270px;                                                                                       
+                                        width: 415px;
+                                        height: 415px;                                    
                                     }
                                 }
                             }
@@ -2969,10 +2940,12 @@ $width: 80%;
                             width: 100%;
                             display: flex;
                             flex-direction: column;
+                            align-items: center;
                             gap: 20px;
                             .cases__startup {   
-                                width: 100%;
-                                max-height: 605px;
+                                width: 684px;
+                                height: 666px;
+                                max-height: none;
                                 box-sizing: border-box; 
                                 display: flex;
                                 align-items: start;
@@ -2980,27 +2953,21 @@ $width: 80%;
                                 border-radius: 20px;
                                 background-color: #060606;
                                 border: 1px solid rgba(73, 73, 73, 1);
-                                .text {                                                  
-                                    padding: 60px 0 0 20px;
+                                .text {
+                                    padding: 88px 0 0 84px;
                                     position: relative;
                                     z-index: 10;
-                                    .cases__startup__name {                                       
+                                    .cases__indie__name {
                                         font-family: "Hauora";
                                         font-size: 16px;
                                         font-weight: 500;
                                         line-height: 20.8px;
                                         text-align: left;                                        
-                                        color: $COLOR_LIGHT_WHITE;  
+                                        color: $COLOR_LIGHT_WHITE;                            
                                     }
-                                    .cases__startup__discription {
-                                        br {
-                                            display: none;
-                                        }
-                                        .mob {
-                                            display: flex;
-                                        }
-                                        max-width: 325px;
-                                        padding-top: 42px;
+                                    .cases__indie__discription {                                       
+                                        max-width: 420px;
+                                        padding-top: 30px;
                                         font-family: "Hauora";
                                         font-size: 16px;
                                         font-weight: 500;
@@ -3020,14 +2987,15 @@ $width: 80%;
                                     justify-content: center;
     
                                     .video {
-                                        width: 270px;
-                                        height: 270px;
+                                        width: 415px;
+                                        height: 415px;                                    
                                     }
                                 }
                             }                      
                             .cases__interprise {
-                                width: 100%;
-                                height: 510px;
+                                width: 684px;
+                                height: 666px;
+                                max-height: none;
                                 box-sizing: border-box;                            
                                 display: flex;
                                 align-items: start;
@@ -3036,25 +3004,19 @@ $width: 80%;
                                 background-color: #060606;
                                 border: 1px solid rgba(73, 73, 73, 1);
                                 .text {
+                                    padding: 88px 0 0 84px;
                                     position: relative;
-                                    padding: 60px 0 0 20px;
                                     z-index: 10;
-                                    .cases__interprise__name {
+                                    .cases__indie__name {
                                         font-family: "Hauora";
                                         font-size: 16px;
                                         font-weight: 500;
                                         line-height: 20.8px;
                                         text-align: left;                                        
-                                        color: $COLOR_LIGHT_WHITE;
+                                        color: $COLOR_LIGHT_WHITE;                            
                                     }
-                                    .cases__interprise__discription {
-                                        br { 
-                                            display: none;
-                                        }
-                                        .mob {
-                                            display: flex;
-                                        }
-                                        max-width: 320px;
+                                    .cases__indie__discription {                                     
+                                        max-width: 420px;
                                         padding-top: 30px;
                                         font-family: "Hauora";
                                         font-size: 16px;
@@ -3075,8 +3037,8 @@ $width: 80%;
                                     display: flex;
                                     justify-content: center;
                                     .video {
-                                        width: 270px;
-                                        height: 270px;
+                                        width: 415px;
+                                        height: 415px;                                    
                                     }
                                 }
                             }
@@ -3086,8 +3048,8 @@ $width: 80%;
                     &::after {
                         content: "";
                         position: absolute;
-                        left: 62px;
-                        top: 2215px;
+                        left: 32px;
+                        top: 2855px;
                         width: 3px;
                         height: 0px;
                         background-image: url("../../public/images/mobLine.png");
@@ -3097,8 +3059,8 @@ $width: 80%;
                     &.mobAnim::after {
                         content: "";
                         position: absolute;
-                        left: 62px;
-                        top: 2215px;
+                        left: 32px;
+                        top: 2855px;
                         width: 3px;
                         height: 198px;
                         background-image: url("../../public/images/mobLine.png");
@@ -3109,78 +3071,77 @@ $width: 80%;
             }
             .invitation {
                 background: linear-gradient(180deg, rgb(3, 3, 22), rgb(6, 5, 34));
-                padding-top: 195px;
+                padding-top: 220px;
                 width: 100%;
                 @include center();
                 .invitation__container {
                     width: $width;
-                    max-width: none;
+                    max-width: 1120px;
                     display: flex;
                     flex-direction: column;
                     .invitation__title {
                         font-family: "Hauora";
-                        font-size: 25px;
+                        font-size: $FONT_SIZE_40;
                         font-weight: 500;
+                        letter-spacing: 0.03em;
                         line-height: 40px;
                         text-align: left;
                         color: $COLOR_LIGHT_WHITE;
+                        opacity: 0;
+                        transition: all 1s ease 0s;
+                        &.appearance {
+                            opacity: 1;
+                        }  
                     }
                     .invitation__slogan {
-                        br {
-                            display: none;
-                        }
-
-                        padding-top: 17px;
+                        padding-top: 25px;
                         font-family: "Hauora";
-                        font-size: 16px;
+                        font-size: $FONT_SIZE_16;
                         font-weight: 500;
+                        letter-spacing: 0.03em;
                         line-height: 20.8px;
-                        text-align: left;                        
+                        text-align: left;
                         color: $COLOR_GRAY;
+                        opacity: 0;
+                        transition: all 1s ease 0s;
+                        &.appearance {
+                            opacity: 1;
+                        }  
                     }
                     .invitation__search {                    
-                        padding-top: 60px;
+                        padding-top: 67px;
                         width: 100%;
                         display: flex;
-                        flex-direction: column;
+                        justify-content: space-between;
                         .invitation__invite {
-                           display: none;
+                            label {
+                                width: 483px;
+                                display: flex;
+                                justify-content: start;
+                                font-family: "Hauora";
+                                font-size: $FONT_SIZE_16;
+                                font-weight: 500;
+                                line-height: 20.8px;
+                                text-align: left;
+                                color: $COLOR_GRAY
+                            }
+                            .invitation__form {
+                                margin-top: 9px;
+                                @include input();
+                            }
                         }   
                         .invitation__button {
-                            margin-left: 0px;
+                            margin-left: 20px;
                             display: flex;
-                            justify-content: space-between;
-                              
+                            align-items: end;   
                             .invitation__enter__button {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 155px;
-                                height: 42px;                            
-                                padding: 10px 15px 10px 15px;
-                                border-radius: 10px;
-                                border: 1px solid rgba(23, 19, 147, 1);  
-                                background-color: rgb(7, 4, 51);                            
-                                cursor: pointer;
-                                transition: 0.5s;
-    
-                                font-family: "Hauora";
-                                font-size: $FONT_SIZE_14;
-                                font-weight: 500;
-                                letter-spacing: 0.03em;
-                                line-height: 16.8px;
-                                text-align: left;
-                                color: $COLOR_WHITE;
-    
-                                &:hover {
-                                    box-shadow: 0px 0px 26.39px 0px rgba(3, 16, 180, 1);
-                                }
-                            }                 
+                                display: none;
+                            }                  
                             .invitation__button-btn {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                width: 155px;
+                                width: 138px;
                                 height: 42px;                            
                                 padding: 10px 15px 10px 15px;
                                 border-radius: 10px;
@@ -3208,8 +3169,8 @@ $width: 80%;
         }
         .footer {
             background: linear-gradient(180deg, rgb(6, 5, 34), rgb(8, 7, 52));
-            padding-top: 186px;
-            padding-bottom: 82px;
+            padding-top: 120px;
+            padding-bottom: 109.46px;
             width: 100%;
             @include center();
             .footer__container {
@@ -3217,27 +3178,53 @@ $width: 80%;
                 max-width: none;
                 display: flex;
                 flex-direction: column;
-                justify-content: none;
+                justify-content: space-between;
                 color: white;
                 .footer__top {
                     display: flex;
                     justify-content: space-between;
-                    flex-direction: row;
+                    flex-direction: unset;
+                    align-items: end;
+                    .footer__logo {
+                        width: 137px;
+                        height: 22.94px;                    
+                    }
                     .footer__newsletter {
-                        margin-top: 0;                        
+                        margin-top: 97.06px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 97px;
+                        height: 30px;
+                        border-radius: 10px;
+                        border: 1px solid rgba(52, 59, 67, 1);
+                        background-color: transparent;
+                        cursor: pointer;
+    
+                        font-family: "Hauora";
+                        font-size: $FONT_SIZE_14;
+                        font-weight: 500;
+                        letter-spacing: 0.03em;
+                        line-height: 16.8px;
+                        text-align: left;
+                        color: $COLOR_WHITE;
+    
+                        &:hover {
+                            box-shadow: 0px 0px 26.39px 0px rgba(17, 14, 104, 1);
+                        }
                     }
                 }
                 .footer__menu {
-                    padding-top: 62.06px;
-                    padding-bottom: 0;
-                    margin-left: 0;
                     display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 50px  30px;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 50px 20px;
+                    width: 100%;
+                    margin-top: 62px;
+                    margin-left: 0;
                     .footer__column {
                         display: flex;
                         flex-direction: column;
-                        
+                        width: 156px;
                         .footer__column__title {
                             font-family: "Hauora";
                             font-size: $FONT_SIZE_12;
@@ -3245,9 +3232,9 @@ $width: 80%;
                             line-height: 15.6px;
                             text-align: left;
                             color: $COLOR_WHITE;
-                            padding-bottom: 12.54px;
+                            padding-bottom: 42.54px;
                         }
-                    
+    
                         .footer__column__item {                        
                             margin-top: 8px;
                             font-family: "Hauora";
@@ -3259,7 +3246,6 @@ $width: 80%;
                         }
                     }
                 }
-               
             }
         } 
     }
