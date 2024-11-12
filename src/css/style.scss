@@ -685,7 +685,10 @@ $width: 80%;
                             z-index: 10;
                             .hosting__img__mini {
                                 display: none;
-                            }              
+                            }   
+                            .hostingPlanshet  {
+                                display: none;
+                            }           
                            img {
                                 width: 100%;
                                 height: auto;
@@ -721,6 +724,9 @@ $width: 80%;
                                 translate: 70px;
                                 opacity: 0;
                                 transition: 1s ease 0.2s;
+                                .planshet {
+                                    display: none;
+                                }
                                 &.enter {
                                     translate: 0;
                                     opacity: 1;
@@ -751,6 +757,12 @@ $width: 80%;
                                 translate: 70px;
                                 opacity: 0;
                                 transition: 1s ease 0.5s;
+                                .default {
+                                    display: flex;
+                                }
+                                .planshet {
+                                    display: none;
+                                }
                                 &.enter {
                                     translate: 0;
                                     opacity: 1;
@@ -861,6 +873,9 @@ $width: 80%;
                         transition: 1s ease;
                         &.enter {
                             opacity: 1;
+                        }
+                        .team__img__planshet {
+                            display: none;
                         }
                         .team__img__mini{
                             display: none;
@@ -1011,6 +1026,12 @@ $width: 80%;
                                 translate: 0;
                                 opacity: 1;
                             }
+                            .default {
+                                display: flex;
+                            }
+                            .planshet {
+                                display: none;
+                            }
                             img {
                                 padding-top: 64px;
                                 width: 87.95%;
@@ -1038,6 +1059,12 @@ $width: 80%;
                             &.enter {
                                 translate: 0;
                                 opacity: 1;
+                            }
+                            .default {
+                                display: flex;
+                            }
+                            .planshet {
+                                display: none;
                             }
                             img {
                                 padding-top: 64px;
@@ -2149,9 +2176,13 @@ $width: 80%;
                     position: relative;
                     width: $width;                
                     max-width: 744px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     .hosting__title {
                         padding: 0;
                         width: 100%;
+                        max-width: 684px;
                         padding-top: 118px;
                         font-family: "Hauora";
                         font-size: 35px;
@@ -2177,7 +2208,7 @@ $width: 80%;
                             flex-direction: column;
                             justify-content: space-between;
                             background-color: #060606;
-                            width: 100%;
+                            width: 684px;
                             height: 666px;
                             border-radius: 20px;
                             border: 1px solid $COLOR_DARK_GRAY;
@@ -2237,8 +2268,21 @@ $width: 80%;
                                         opacity: 1;
                                     }
                                 } 
-                                .hosting__img__mini {
+                                .hostingPlanshet {
                                     display: flex;
+                                    align-items: end;
+                                    justify-content: end;
+                                    width: 458px;
+                                    height: 426px;
+                                    transform: translateX(22%); 
+                                    opacity: 0;
+                                    transition: all 2s ease 0.5s;
+                                    &.show {
+                                        opacity: 1;
+                                    }
+                                }
+                                .hosting__img__mini {
+                                    display: none;
                                     align-items: end;
                                     justify-content: end;
                                     width: 458px;
@@ -2265,7 +2309,7 @@ $width: 80%;
                             flex-direction: column;
                             align-items: center;
                            .hosting__grid__branch {
-                                width: 100%;
+                                width: 684px;
                                 height: 666px;
                                 @include card();                           
                                 padding-bottom: 0;
@@ -2280,10 +2324,16 @@ $width: 80%;
                                     justify-content: end;
                                     width: 100%;
                                     z-index: 10;
-                                    padding-top: 60px;
+                                    padding-top: 50px;
                                     translate: 70px;
                                     opacity: 0;
                                     transition: 1s ease 0.2s;
+                                    .default {
+                                        display: none;
+                                    }
+                                    .planshet {
+                                        display: flex;
+                                    }
                                     &.enter {
                                         translate: 0;
                                         opacity: 1;
@@ -2297,7 +2347,7 @@ $width: 80%;
                                 }
                            }
                            .hosting__grid__manage {
-                                width: 100%;
+                                width: 684px;
                                 height: 666px;
                                 margin-top: 24px;
                                 @include card();                         
@@ -2312,18 +2362,24 @@ $width: 80%;
                                     display: flex;
                                     justify-content: end;
                                     width: 100%;
-                                    padding-top: 60px;
+                                    padding-top: 50px;
                                     z-index: 10;
                                     translate: 70px;
                                     opacity: 0;
                                     transition: 1s ease 0.5s;
+                                    .default {
+                                        display: none;
+                                    }
+                                    .planshet {
+                                        display: flex;
+                                    }
                                     &.enter {
                                         translate: 0;
                                         opacity: 1;
                                     }
                                    img {
                                         width: 596px;
-                                        height: auto;
+                                        height: 411px;
                                         border-bottom-right-radius: 20px;
                                         object-fit: cover
                                    }
@@ -2369,6 +2425,7 @@ $width: 80%;
                     align-items: center;
                     .team__title {
                         width: 100%;
+                        max-width: 684px;
                         padding: 0;
                         font-family: "Hauora";
                         font-size: 35px;
@@ -2379,6 +2436,7 @@ $width: 80%;
                     }
                     .team__slogan {  
                         width: 100%;
+                        max-width: 684px;
                         padding: 20px 0 0 0;                        
                         font-family: "Hauora";
                         font-size: 18px;
@@ -2392,7 +2450,7 @@ $width: 80%;
                         flex-direction: column;
                         justify-content: space-between;
                         overflow: hidden;
-                        width: 100%;
+                        width: 684px;
                         margin: 0;
                         margin-top: 40px;
                         height: 653px;
@@ -2428,12 +2486,14 @@ $width: 80%;
                                 display: none;
                             }
                             .team__img__mini{
+                                display: none;
+                            }
+                            .team__img__planshet {
                                 display: flex;
                             }
-                            img {       
-                                transform: translateX(13.5%);
-                                padding-top: 103px;                       
-                                width: 684px;
+                            img { 
+                                padding-top: 60px;                       
+                                width: 596px;
                                 height: auto;
                                 border-bottom-right-radius: 20px;
                                 border-bottom-left-radius: 20px;
@@ -2443,6 +2503,7 @@ $width: 80%;
                     }
                     .team__discription {
                         width: 100%;
+                        max-width: 684px;
                         display: flex;
                         flex-direction: column-reverse;
                         .team__discription-text {                         
@@ -2535,7 +2596,7 @@ $width: 80%;
                         flex-direction: column;
                         align-items: center;
                         .methodology__grid__scrum {
-                            width: 100%;
+                            width: 684px;
                             height: 666px;
                             @include card();
                             padding-bottom: 0;
@@ -2550,12 +2611,18 @@ $width: 80%;
                                 translate: 70px;
                                 opacity: 0;
                                 transition: 1s ease 0.1s;
+                                .default {
+                                    display: none;
+                                }
+                                .planshet {
+                                    display: flex;
+                                }
                                 &.enter {
                                     translate: 0;
                                     opacity: 1;
                                 }
                                 img {
-                                    padding-top: 64px;
+                                    padding-top: 50px;
                                     width: 597px;
                                     height: auto;
                                     border-bottom-right-radius: 20px;
@@ -2565,7 +2632,7 @@ $width: 80%;
                             }
                         }
                         .methodology__grid__kanban {
-                            width: 100%;
+                            width: 684px;
                             height: 666px;
                             margin-top: 24px;
                             @include card();
@@ -2581,14 +2648,20 @@ $width: 80%;
                                 translate: 70px;
                                 opacity: 0;
                                 transition: 1s ease 0.4s;
+                                .default {
+                                    display: none;
+                                }
+                                .planshet {
+                                    display: flex;
+                                }
                                 &.enter {
                                     translate: 0;
                                     opacity: 1;
                                 }
                                 img {
-                                    padding-top: 64px;
+                                    padding-top: 50px;
                                     width: 596px;
-                                    height: auto;
+                                    height: 411px;
                                     border-bottom-right-radius: 20px;
                                     -o-object-fit: cover;
                                     object-fit: cover;
@@ -2602,7 +2675,7 @@ $width: 80%;
                         justify-content: space-between;
                         overflow: hidden;
                         margin-top: 24px;
-                        width: 100%;
+                        width: 684px;
                         height: 666px;
                         border-radius: 20px;
                         border: 1px solid rgba(73, 73, 73, 1);
@@ -2790,6 +2863,7 @@ $width: 80%;
                     align-items: center;
                     .cases__title {
                         width: 100%;
+                        max-width: 684px;
                         padding: 0px;
                         font-family: "Hauora";
                         font-size: 25px;
@@ -2800,6 +2874,7 @@ $width: 80%;
                     }
                     .cases__slogan {
                         width: 100%;
+                        max-width: 684px;
                         padding: 0;
                         margin-top: 20px;
                         font-family: "Hauora";
@@ -2823,7 +2898,7 @@ $width: 80%;
                             align-items: center;                      
                             gap: 20px;
                             .cases__indie {     
-                                width: 100%;
+                                width: 684px;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box;                                        
@@ -2870,12 +2945,12 @@ $width: 80%;
                                
                                 .cases__indie__img {
                                     width: 100%;
-                                    height: 510px;
+                                    height: auto;
                                     display: flex;
                                     justify-content: center;
                                     padding-top: 0;
-                                    margin-top: -4px;
-                                    padding-bottom: 4px;
+                                    margin-top: 0;
+                                    padding-bottom: 2px;
                                     .video {
                                         width: 415px;
                                         height: 415px;                                    
@@ -2883,7 +2958,7 @@ $width: 80%;
                                 }
                             }
                             .cases__buisnes {
-                                width: 100%;
+                                width: 684px;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box;  
@@ -2931,13 +3006,13 @@ $width: 80%;
                                 }
                                
                                 .cases__buisnes__img {
-                                    padding-top: 23px;
-                                    padding-bottom: 4px;
+                                    padding-top: 0px;
+                                    padding-bottom: 2px;
                                     width: 100%;
                                     display: flex;
                                     justify-content: center;
                                     .video {
-                                        width: 415px;
+                                        width: 417px;
                                         height: 415px;                                    
                                     }
                                 }
@@ -2950,7 +3025,7 @@ $width: 80%;
                             align-items: center;
                             gap: 20px;
                             .cases__startup {   
-                                width: 100%;
+                                width: 684px;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box; 
@@ -2989,8 +3064,8 @@ $width: 80%;
                                     }
                                 }
                                 .cases__startup__img {
-                                    padding-top: 23px;
-                                    padding-bottom: 4px;
+                                    padding-top: 0px;
+                                    padding-bottom: 1px;
                                     width: 100%;
                                     display: flex;
                                     justify-content: center;
@@ -3002,7 +3077,7 @@ $width: 80%;
                                 }
                             }                      
                             .cases__interprise {
-                                width: 100%;
+                                width: 684px;
                                 height: 666px;
                                 max-height: none;
                                 box-sizing: border-box;                            
@@ -3041,8 +3116,8 @@ $width: 80%;
                                     }
                                 }
                                 .cases__interprise__img {
-                                    padding-top: 14px;
-                                    padding-bottom: 4px;
+                                    padding-top: 0px;
+                                    padding-bottom: 0px;
                                     margin-top: 0;
                                     width: 100%;
                                     display: flex;
@@ -3090,7 +3165,10 @@ $width: 80%;
                     max-width: 744px;
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     .invitation__title {
+                        width: 100%;
+                        max-width: 684px;
                         font-family: "Hauora";
                         font-size: $FONT_SIZE_40;
                         font-weight: 500;
@@ -3105,6 +3183,8 @@ $width: 80%;
                         }  
                     }
                     .invitation__slogan {
+                        width: 100%;
+                        max-width: 684px;
                         padding-top: 25px;
                         font-family: "Hauora";
                         font-size: $FONT_SIZE_16;
@@ -3122,6 +3202,7 @@ $width: 80%;
                     .invitation__search {                    
                         padding-top: 67px;
                         width: 100%;
+                        max-width: 684px;
                         display: flex;
                         justify-content: space-between;
                         .invitation__invite {
@@ -3186,7 +3267,7 @@ $width: 80%;
             @include center();
             .footer__container {
                 width: $width;
-                max-width: 744px;
+                max-width: 684px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -3836,7 +3917,10 @@ $width: 80%;
                                     &::before {
                                         opacity: 1;
                                     }
-                                }                                
+                                }             
+                                .hostingPlanshet {
+                                    display: none;
+                                }                   
                                 .hosting__img__big {
                                     display: none;
                                 }       
@@ -3866,6 +3950,7 @@ $width: 80%;
                             gap: 0 24px;
                            .hosting__grid__branch {
                                 padding-bottom: 0;
+                                width: 100%;
                                 height: 510px;
                                 p {
                                     max-width: 324px;
@@ -3903,6 +3988,7 @@ $width: 80%;
                            .hosting__grid__manage {
                                 padding-bottom: 0;
                                 margin-top: 20px;
+                                width: 100%;
                                 height: 510px;
                                 p {
                                     max-width: 330px;
@@ -4031,10 +4117,14 @@ $width: 80%;
                             .team__img__big{
                                 display: none;
                             }
+                            .team__img__planshet {
+                                display: none;
+                            }
                             .team__img__mini{
                                 display: flex;
                             }
                             img {       
+                                transform: translateX(0);
                                 padding-top: 103px;                       
                                 width: 100%;
                                 height: 284.53px;

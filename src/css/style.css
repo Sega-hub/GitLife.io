@@ -703,6 +703,9 @@ a {
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__mini {
   display: none;
 }
+.container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hostingPlanshet {
+  display: none;
+}
 .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images img {
   width: 100%;
   height: auto;
@@ -767,6 +770,9 @@ a {
   opacity: 0;
   transition: 1s ease 0.2s;
 }
+.container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img .planshet {
+  display: none;
+}
 .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img.enter {
   translate: 0;
   opacity: 1;
@@ -826,6 +832,12 @@ a {
   translate: 70px;
   opacity: 0;
   transition: 1s ease 0.5s;
+}
+.container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img .default {
+  display: flex;
+}
+.container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img .planshet {
+  display: none;
 }
 .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img.enter {
   translate: 0;
@@ -936,6 +948,9 @@ a {
 }
 .container .main .team .team__container .team__card .team__card__img.enter {
   opacity: 1;
+}
+.container .main .team .team__container .team__card .team__card__img .team__img__planshet {
+  display: none;
 }
 .container .main .team .team__container .team__card .team__card__img .team__img__mini {
   display: none;
@@ -1115,6 +1130,12 @@ a {
   translate: 0;
   opacity: 1;
 }
+.container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img .default {
+  display: flex;
+}
+.container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img .planshet {
+  display: none;
+}
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img img {
   padding-top: 64px;
   width: 87.95%;
@@ -1171,6 +1192,12 @@ a {
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img.enter {
   translate: 0;
   opacity: 1;
+}
+.container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img .default {
+  display: flex;
+}
+.container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img .planshet {
+  display: none;
 }
 .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img img {
   padding-top: 64px;
@@ -2545,10 +2572,14 @@ a {
     position: relative;
     width: 91.93%;
     max-width: 744px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .container .main .hosting .hosting__container .hosting__title {
     padding: 0;
     width: 100%;
+    max-width: 684px;
     padding-top: 118px;
     font-family: "Hauora";
     font-size: 35px;
@@ -2577,7 +2608,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     background-color: #060606;
-    width: 100%;
+    width: 684px;
     height: 666px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
@@ -2638,8 +2669,21 @@ a {
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images.show::before {
     opacity: 1;
   }
-  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__mini {
+  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hostingPlanshet {
     display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 458px;
+    height: 426px;
+    transform: translateX(22%);
+    opacity: 0;
+    transition: all 2s ease 0.5s;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hostingPlanshet.show {
+    opacity: 1;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__mini {
+    display: none;
     align-items: end;
     justify-content: end;
     width: 458px;
@@ -2663,7 +2707,7 @@ a {
     align-items: center;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch {
-    width: 100%;
+    width: 684px;
     height: 666px;
     display: flex;
     flex-direction: column;
@@ -2708,10 +2752,16 @@ a {
     justify-content: end;
     width: 100%;
     z-index: 10;
-    padding-top: 60px;
+    padding-top: 50px;
     translate: 70px;
     opacity: 0;
     transition: 1s ease 0.2s;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img .default {
+    display: none;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img .planshet {
+    display: flex;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch .hosting__img.enter {
     translate: 0;
@@ -2725,7 +2775,7 @@ a {
        object-fit: cover;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage {
-    width: 100%;
+    width: 684px;
     height: 666px;
     margin-top: 24px;
     display: flex;
@@ -2770,11 +2820,17 @@ a {
     display: flex;
     justify-content: end;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 50px;
     z-index: 10;
     translate: 70px;
     opacity: 0;
     transition: 1s ease 0.5s;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img .default {
+    display: none;
+  }
+  .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img .planshet {
+    display: flex;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img.enter {
     translate: 0;
@@ -2782,7 +2838,7 @@ a {
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage .hosting__img img {
     width: 596px;
-    height: auto;
+    height: 411px;
     border-bottom-right-radius: 20px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -2827,6 +2883,7 @@ a {
   }
   .container .main .team .team__container .team__title {
     width: 100%;
+    max-width: 684px;
     padding: 0;
     font-family: "Hauora";
     font-size: 35px;
@@ -2837,6 +2894,7 @@ a {
   }
   .container .main .team .team__container .team__slogan {
     width: 100%;
+    max-width: 684px;
     padding: 20px 0 0 0;
     font-family: "Hauora";
     font-size: 18px;
@@ -2850,7 +2908,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    width: 100%;
+    width: 684px;
     margin: 0;
     margin-top: 40px;
     height: 653px;
@@ -2887,12 +2945,14 @@ a {
     display: none;
   }
   .container .main .team .team__container .team__card .team__card__img .team__img__mini {
+    display: none;
+  }
+  .container .main .team .team__container .team__card .team__card__img .team__img__planshet {
     display: flex;
   }
   .container .main .team .team__container .team__card .team__card__img img {
-    transform: translateX(13.5%);
-    padding-top: 103px;
-    width: 684px;
+    padding-top: 60px;
+    width: 596px;
     height: auto;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -2901,6 +2961,7 @@ a {
   }
   .container .main .team .team__container .team__discription {
     width: 100%;
+    max-width: 684px;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -2993,7 +3054,7 @@ a {
     align-items: center;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum {
-    width: 100%;
+    width: 684px;
     height: 666px;
     display: flex;
     flex-direction: column;
@@ -3039,12 +3100,18 @@ a {
     opacity: 0;
     transition: 1s ease 0.1s;
   }
+  .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img .default {
+    display: none;
+  }
+  .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img .planshet {
+    display: flex;
+  }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img.enter {
     translate: 0;
     opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__scrum .methodology__img img {
-    padding-top: 64px;
+    padding-top: 50px;
     width: 597px;
     height: auto;
     border-bottom-right-radius: 20px;
@@ -3052,7 +3119,7 @@ a {
     object-fit: cover;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban {
-    width: 100%;
+    width: 684px;
     height: 666px;
     margin-top: 24px;
     display: flex;
@@ -3099,14 +3166,20 @@ a {
     opacity: 0;
     transition: 1s ease 0.4s;
   }
+  .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img .default {
+    display: none;
+  }
+  .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img .planshet {
+    display: flex;
+  }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img.enter {
     translate: 0;
     opacity: 1;
   }
   .container .main .methodology .methodology__container .methodology__grid .methodology__grid__kanban .methodology__img img {
-    padding-top: 64px;
+    padding-top: 50px;
     width: 596px;
-    height: auto;
+    height: 411px;
     border-bottom-right-radius: 20px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -3117,7 +3190,7 @@ a {
     justify-content: space-between;
     overflow: hidden;
     margin-top: 24px;
-    width: 100%;
+    width: 684px;
     height: 666px;
     border-radius: 20px;
     border: 1px solid rgb(73, 73, 73);
@@ -3372,6 +3445,7 @@ a {
   }
   .container .main .cases .cases__container .cases__title {
     width: 100%;
+    max-width: 684px;
     padding: 0px;
     font-family: "Hauora";
     font-size: 25px;
@@ -3382,6 +3456,7 @@ a {
   }
   .container .main .cases .cases__container .cases__slogan {
     width: 100%;
+    max-width: 684px;
     padding: 0;
     margin-top: 20px;
     font-family: "Hauora";
@@ -3407,7 +3482,7 @@ a {
     gap: 20px;
   }
   .container .main .cases .cases__container .cases__box .top .cases__indie {
-    width: 100%;
+    width: 684px;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3454,19 +3529,19 @@ a {
   }
   .container .main .cases .cases__container .cases__box .top .cases__indie .cases__indie__img {
     width: 100%;
-    height: 510px;
+    height: auto;
     display: flex;
     justify-content: center;
     padding-top: 0;
-    margin-top: -4px;
-    padding-bottom: 4px;
+    margin-top: 0;
+    padding-bottom: 2px;
   }
   .container .main .cases .cases__container .cases__box .top .cases__indie .cases__indie__img .video {
     width: 415px;
     height: 415px;
   }
   .container .main .cases .cases__container .cases__box .top .cases__buisnes {
-    width: 100%;
+    width: 684px;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3513,14 +3588,14 @@ a {
     color: rgb(120, 119, 146);
   }
   .container .main .cases .cases__container .cases__box .top .cases__buisnes .cases__buisnes__img {
-    padding-top: 23px;
-    padding-bottom: 4px;
+    padding-top: 0px;
+    padding-bottom: 2px;
     width: 100%;
     display: flex;
     justify-content: center;
   }
   .container .main .cases .cases__container .cases__box .top .cases__buisnes .cases__buisnes__img .video {
-    width: 415px;
+    width: 417px;
     height: 415px;
   }
   .container .main .cases .cases__container .cases__box .bottom {
@@ -3531,7 +3606,7 @@ a {
     gap: 20px;
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__startup {
-    width: 100%;
+    width: 684px;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3571,8 +3646,8 @@ a {
     color: rgb(120, 119, 146);
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__startup .cases__startup__img {
-    padding-top: 23px;
-    padding-bottom: 4px;
+    padding-top: 0px;
+    padding-bottom: 1px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -3582,7 +3657,7 @@ a {
     height: 415px;
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__interprise {
-    width: 100%;
+    width: 684px;
     height: 666px;
     max-height: none;
     box-sizing: border-box;
@@ -3622,8 +3697,8 @@ a {
     color: rgb(120, 119, 146);
   }
   .container .main .cases .cases__container .cases__box .bottom .cases__interprise .cases__interprise__img {
-    padding-top: 14px;
-    padding-bottom: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     margin-top: 0;
     width: 100%;
     display: flex;
@@ -3668,8 +3743,11 @@ a {
     max-width: 744px;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .container .main .invitation .invitation__container .invitation__title {
+    width: 100%;
+    max-width: 684px;
     font-family: "Hauora";
     font-size: 40px;
     font-weight: 500;
@@ -3684,6 +3762,8 @@ a {
     opacity: 1;
   }
   .container .main .invitation .invitation__container .invitation__slogan {
+    width: 100%;
+    max-width: 684px;
     padding-top: 25px;
     font-family: "Hauora";
     font-size: 16px;
@@ -3701,6 +3781,7 @@ a {
   .container .main .invitation .invitation__container .invitation__search {
     padding-top: 67px;
     width: 100%;
+    max-width: 684px;
     display: flex;
     justify-content: space-between;
   }
@@ -3821,7 +3902,7 @@ a {
   }
   .container .footer .footer__container {
     width: 91.93%;
-    max-width: 744px;
+    max-width: 684px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -4458,6 +4539,9 @@ a {
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images.show::before {
     opacity: 1;
   }
+  .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hostingPlanshet {
+    display: none;
+  }
   .container .main .hosting .hosting__container .hosting__content .hosting__code .hosting__code__images .hosting__img__big {
     display: none;
   }
@@ -4486,6 +4570,7 @@ a {
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch {
     padding-bottom: 0;
+    width: 100%;
     height: 510px;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__branch p {
@@ -4521,6 +4606,7 @@ a {
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage {
     padding-bottom: 0;
     margin-top: 20px;
+    width: 100%;
     height: 510px;
   }
   .container .main .hosting .hosting__container .hosting__content .hosting__grid .hosting__grid__manage p {
@@ -4648,10 +4734,14 @@ a {
   .container .main .team .team__container .team__card .team__card__img .team__img__big {
     display: none;
   }
+  .container .main .team .team__container .team__card .team__card__img .team__img__planshet {
+    display: none;
+  }
   .container .main .team .team__container .team__card .team__card__img .team__img__mini {
     display: flex;
   }
   .container .main .team .team__container .team__card .team__card__img img {
+    transform: translateX(0);
     padding-top: 103px;
     width: 100%;
     height: 284.53px;

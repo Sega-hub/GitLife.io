@@ -1,7 +1,7 @@
 // import "../css/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (innerWidth > 1000) {
+    if (innerWidth > 1200) {
         const lines = document.querySelectorAll(".anim");       
         const cards = document.querySelectorAll(".card"); 
         const effect = document.querySelector(".effect");
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const animLine = mobLines[i];
                 const animLineHeight = animLine.offsetHeight;
                 const animLineOffset = offset(animLine).top;
-                const animStart = 0.45;
+                const animStart = 0.6;
     
                 let lineAnimPoint = window.innerHeight - animLineHeight / animStart;
     
@@ -137,10 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
     
                 if ((pageYOffset > animLineOffset - lineAnimPoint) && pageYOffset < (animLineOffset + animLineHeight)) {               
-                    animLine.classList.add("mobAnim");
+                    animLine.classList.add("mobAnim");                    
                 }
-              
+               
             };
+           
         }
     } 
 
