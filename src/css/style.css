@@ -2058,7 +2058,7 @@ a {
   }
   .container .header {
     width: 100vw;
-    max-width: 100%;
+    max-width: 744px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2539,9 +2539,9 @@ a {
     display: flex;
     justify-content: center;
     font-family: "Hauora";
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 500;
-    line-height: 25px;
+    line-height: 40px;
     text-align: center;
     color: rgb(240, 246, 252);
   }

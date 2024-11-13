@@ -1814,7 +1814,7 @@ $width: 80%;
     .container {
         .header {
             width: 100vw;
-            max-width: 100%;
+            max-width: 744px;
             @include center();
             background-color: transparent;
             padding-bottom: 10px;
@@ -2145,9 +2145,9 @@ $width: 80%;
                     display: flex;
                     justify-content: center;
                     font-family: "Hauora";
-                    font-size: 25px;
+                    font-size: 40px;
                     font-weight: 500;
-                    line-height: 25px;
+                    line-height: 40px;
                     text-align: center;
                     color: $COLOR_LIGHT_WHITE;
                 }
