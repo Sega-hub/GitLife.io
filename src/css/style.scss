@@ -1814,7 +1814,7 @@ $width: 80%;
     .container {
         .header {
             width: 100vw;
-            max-width: 744px;
+            max-width: 100%;
             @include center();
             background-color: transparent;
             padding-bottom: 10px;
@@ -1827,8 +1827,8 @@ $width: 80%;
             }
 
             .header__container {
-                max-width: 744px;
-                width: $width;
+                max-width: 684px;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: end;

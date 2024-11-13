@@ -2058,7 +2058,7 @@ a {
   }
   .container .header {
     width: 100vw;
-    max-width: 744px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2072,8 +2072,8 @@ a {
     transform: translateY(-100%);
   }
   .container .header .header__container {
-    max-width: 744px;
-    width: 91.93%;
+    max-width: 684px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
