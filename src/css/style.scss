@@ -481,10 +481,11 @@ $width: 80%;
                         }                        
                     
                         .openspace__video {
-                            width: 120%;
-                            mix-blend-mode: screen;
+                            width: 125%;
+                            mix-blend-mode: darken;
                             filter: blur(0px);
                             z-index: 10;
+                            margin-top: 180px;
                         }
                     
                         .white {
@@ -505,13 +506,13 @@ $width: 80%;
                     
                         .openspace__cursor__circle {
                             width: 250px;
-                            height: 230px;
+                            height: 250px;
                             background: $COLOR_WHITE;
                             border-radius: 60%;
                             animation: morphing 8s infinite linear;
                             filter: blur(30px);
-                            z-index: 7;
-                            mix-blend-mode: overlay;   
+                            z-index: 7;  
+                            margin-top: 15px;
                             will-change: transform, opacity;
                             transform: translate3d(0, 0, 0);
                         }
