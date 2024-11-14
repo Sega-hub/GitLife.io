@@ -530,6 +530,7 @@ a {
   filter: blur(30px);
   z-index: 7;
   mix-blend-mode: color-dodge;
+  margin-top: 28px;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__ball {
   width: 120px;
