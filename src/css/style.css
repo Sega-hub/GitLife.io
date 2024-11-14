@@ -531,6 +531,8 @@ a {
   z-index: 7;
   mix-blend-mode: color-dodge;
   margin-top: 15px;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__ball {
   width: 130px;
@@ -541,6 +543,8 @@ a {
   animation: morphing 4s infinite reverse;
   filter: blur(25px);
   z-index: 6;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
 }
 .container .main .advantages {
   width: 100%;

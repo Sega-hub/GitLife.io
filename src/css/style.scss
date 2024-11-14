@@ -513,6 +513,8 @@ $width: 80%;
                             z-index: 7;
                             mix-blend-mode: color-dodge;                            
                             margin-top: 15px;
+                            will-change: transform, opacity;
+                            transform: translate3d(0, 0, 0);
                         }
                     
                         .openspace__cursor__ball {
@@ -524,6 +526,8 @@ $width: 80%;
                             animation: morphing 4s infinite reverse;
                             filter: blur(25px);
                             z-index: 6;
+                            will-change: transform, opacity;
+                            transform: translate3d(0, 0, 0);
                         }
                     }
                     
