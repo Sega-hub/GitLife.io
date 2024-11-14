@@ -478,18 +478,17 @@ $width: 80%;
                     
                         .white, .black, .openspace__video, .openspace__cursor__circle, .openspace__cursor__ball {
                             position: absolute;
-                            backface-visibility: hidden;
                         }                        
                     
                         .openspace__video {
-                            object-fit: fill;
-                            width: 120%;
-                            height: 100%;
-                            -webkit-filter: blur(0px);
+                            width: 125%;
                             filter: blur(0px);
-                            -webkit-mix-blend-mode: darken;
-                            mix-blend-mode: screen;
                             z-index: 10;
+                            margin-top: 180px;
+                            transform: translateZ(0);
+                            -webkit-blend-mode: darken;
+                            mix-blend-mode: darken;
+                            will-change: opacity, transform;
                         }
                     
                         .white {
@@ -511,13 +510,13 @@ $width: 80%;
                         .openspace__cursor__circle {
                             width: 250px;
                             height: 250px;
-                            background-color: $COLOR_WHITE;
+                            background: $COLOR_WHITE;
                             border-radius: 60%;
                             animation: morphing 8s infinite linear;
-                            filter: blur(35px);
+                            filter: blur(30px);
                             z-index: 7;  
                             margin-top: 15px;
-                            mix-blend-mode: color-dodge;
+                            background-image: url("../../public/images/ball.mp4");
                         }
                     
                         .openspace__cursor__ball {
@@ -527,8 +526,10 @@ $width: 80%;
                             background-color: blue;
                             transition: all 1s ease;
                             animation: morphing 4s infinite reverse;
-                            filter: blur(20px);
+                            filter: blur(25px);
                             z-index: 6;
+                            will-change: transform, opacity;
+                            transform: translate3d(0, 0, 0);
                         }
                     }
                     
