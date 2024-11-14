@@ -529,8 +529,7 @@ a {
   animation: morphing 8s infinite linear;
   filter: blur(30px);
   z-index: 7;
-  mix-blend-mode: color-dodge;
-  margin-top: 15px;
+  mix-blend-mode: overlay;
   will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
 }
