@@ -505,13 +505,12 @@ a {
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
   -o-object-fit: fill;
      object-fit: fill;
-  width: 125%;
+  width: 120%;
   height: 100%;
   filter: blur(0px);
   -webkit-mix-blend-mode: darken;
-  mix-blend-mode: darken;
+  mix-blend-mode: screen;
   z-index: 10;
-  margin-top: 180px;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .white {
   width: 100%;
@@ -530,12 +529,13 @@ a {
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__circle {
   width: 250px;
   height: 250px;
-  background: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   border-radius: 60%;
   animation: morphing 8s infinite linear;
-  filter: blur(30px);
+  filter: blur(35px);
   z-index: 7;
   margin-top: 15px;
+  mix-blend-mode: color-dodge;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__ball {
   width: 130px;
@@ -544,7 +544,7 @@ a {
   background-color: blue;
   transition: all 1s ease;
   animation: morphing 4s infinite reverse;
-  filter: blur(25px);
+  filter: blur(20px);
   z-index: 6;
 }
 .container .main .advantages {

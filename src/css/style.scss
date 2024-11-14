@@ -483,14 +483,13 @@ $width: 80%;
                     
                         .openspace__video {
                             object-fit: fill;
-                            width: 125%;
+                            width: 120%;
                             height: 100%;
                             -webkit-filter: blur(0px);
                             filter: blur(0px);
                             -webkit-mix-blend-mode: darken;
-                            mix-blend-mode: darken;
+                            mix-blend-mode: screen;
                             z-index: 10;
-                            margin-top: 180px;
                         }
                     
                         .white {
@@ -512,12 +511,13 @@ $width: 80%;
                         .openspace__cursor__circle {
                             width: 250px;
                             height: 250px;
-                            background: $COLOR_WHITE;
+                            background-color: $COLOR_WHITE;
                             border-radius: 60%;
                             animation: morphing 8s infinite linear;
-                            filter: blur(30px);
+                            filter: blur(35px);
                             z-index: 7;  
                             margin-top: 15px;
+                            mix-blend-mode: color-dodge;
                         }
                     
                         .openspace__cursor__ball {
@@ -527,7 +527,7 @@ $width: 80%;
                             background-color: blue;
                             transition: all 1s ease;
                             animation: morphing 4s infinite reverse;
-                            filter: blur(25px);
+                            filter: blur(20px);
                             z-index: 6;
                         }
                     }
