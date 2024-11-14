@@ -500,8 +500,11 @@ a {
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .white, .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .black, .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video, .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__circle, .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__ball {
   position: absolute;
+  backface-visibility: hidden;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 125%;
   mix-blend-mode: darken;
   filter: blur(0px);
@@ -531,8 +534,6 @@ a {
   filter: blur(30px);
   z-index: 7;
   margin-top: 15px;
-  will-change: transform, opacity;
-  transform: translate3d(0, 0, 0);
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__ball {
   width: 130px;
@@ -543,8 +544,6 @@ a {
   animation: morphing 4s infinite reverse;
   filter: blur(25px);
   z-index: 6;
-  will-change: transform, opacity;
-  transform: translate3d(0, 0, 0);
 }
 .container .main .advantages {
   width: 100%;
@@ -2484,10 +2483,11 @@ a {
     position: absolute;
   }
   .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
-    width: 120%;
-    mix-blend-mode: screen;
+    width: 125%;
+    mix-blend-mode: darken;
     filter: blur(0px);
     z-index: 10;
+    margin-top: 180px;
   }
   .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .white {
     width: 100%;
@@ -2504,24 +2504,28 @@ a {
     z-index: 8;
   }
   .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__circle {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     background: rgb(255, 255, 255);
     border-radius: 60%;
     animation: morphing 8s infinite linear;
     filter: blur(30px);
     z-index: 7;
-    mix-blend-mode: color-dodge;
+    margin-top: 15px;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
   .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__cursor__ball {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background-color: blue;
     transition: all 1s ease;
     animation: morphing 4s infinite reverse;
     filter: blur(25px);
     z-index: 6;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
   .container .main .advantages {
     width: 100%;
