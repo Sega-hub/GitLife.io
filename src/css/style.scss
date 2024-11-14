@@ -482,10 +482,13 @@ $width: 80%;
                         }                        
                     
                         .openspace__video {
-                            object-fit: cover;
+                            object-fit: fill;
                             width: 125%;
-                            mix-blend-mode: darken;
+                            height: 100%;
+                            -webkit-filter: blur(0px);
                             filter: blur(0px);
+                            -webkit-mix-blend-mode: darken;
+                            mix-blend-mode: darken;
                             z-index: 10;
                             margin-top: 180px;
                         }

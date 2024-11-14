@@ -503,11 +503,13 @@ a {
   backface-visibility: hidden;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
   width: 125%;
-  mix-blend-mode: darken;
+  height: 100%;
   filter: blur(0px);
+  -webkit-mix-blend-mode: darken;
+  mix-blend-mode: darken;
   z-index: 10;
   margin-top: 180px;
 }
