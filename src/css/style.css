@@ -503,11 +503,13 @@ a {
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
   width: 125%;
+  filter: blur(0px);
   z-index: 10;
   margin-top: 400px;
   transform: translateZ(0);
   -webkit-blend-mode: darken;
   mix-blend-mode: darken;
+  will-change: opacity, transform;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .white {
   width: 100%;
