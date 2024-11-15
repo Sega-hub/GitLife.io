@@ -502,12 +502,10 @@ a {
   position: absolute;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
-  width: 100%;
   filter: blur(0px);
   z-index: 10;
-  margin-top: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   mix-blend-mode: darken;
   transform: rotateZ(0);
   transform: translate3d(0, 0, 0);
