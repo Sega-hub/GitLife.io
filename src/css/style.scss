@@ -486,10 +486,11 @@ $width: 80%;
                             z-index: 10;
                             margin-top: 300px;
                             object-fit: cover;
-                            mix-blend-mode: multiply;
-                            transform: translate3d(0, 0, 0); // Убедитесь, что это свойство включено.
-                            -webkit-transform: translate3d(0, 0, 0); // Добавьте префикс для Safari.
-                            -webkit-backface-visibility: hidden; // Улучшает рендеринг в WebKit.
+                            mix-blend-mode: darken;
+                            transform: rotateZ(0);
+                            transform: translate3d(0, 0, 0); 
+                            -webkit-transform: translate3d(0, 0, 0); 
+                            -webkit-backface-visibility: hidden;
                             backface-visibility: hidden;
                             will-change: opacity, transform;
                             pointer-events: none;
@@ -521,7 +522,6 @@ $width: 80%;
                             z-index: 7;  
                             margin-top: 15px;
                             background-image: url("../../public/images/ball.mp4");
-                            mix-blend-mode: hard-light;
                         }
                     
                         .openspace__cursor__ball {
