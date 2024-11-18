@@ -503,7 +503,6 @@ a {
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .openspace__video {
   filter: blur(0px);
-  z-index: 10;
   -o-object-fit: scale-down;
      object-fit: scale-down;
   mix-blend-mode: darken;
@@ -513,6 +512,7 @@ a {
   backface-visibility: hidden;
   will-change: opacity, transform;
   pointer-events: none;
+  z-index: 10;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .white {
   width: 100%;
@@ -548,8 +548,6 @@ a {
   animation: morphing 4s infinite reverse;
   filter: blur(25px);
   z-index: 6;
-  will-change: transform, opacity;
-  transform: translate3d(0, 0, 0);
 }
 .container .main .advantages {
   width: 100%;

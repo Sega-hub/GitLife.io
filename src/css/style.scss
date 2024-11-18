@@ -482,7 +482,6 @@ $width: 80%;
                     
                         .openspace__video {
                             filter: blur(0px);
-                            z-index: 10;
                             object-fit: scale-down;
                             mix-blend-mode: darken;
                             transform: rotateZ(0);
@@ -491,7 +490,8 @@ $width: 80%;
                             -webkit-backface-visibility: hidden;
                             backface-visibility: hidden;
                             will-change: opacity, transform;
-                            pointer-events: none;
+                            pointer-events: none;                            
+                            z-index: 10;
                         }
                     
                         .white {
@@ -531,8 +531,6 @@ $width: 80%;
                             animation: morphing 4s infinite reverse;
                             filter: blur(25px);
                             z-index: 6;
-                            will-change: transform, opacity;
-                            transform: translate3d(0, 0, 0);
                         }
                     }
                     
