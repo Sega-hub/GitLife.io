@@ -513,6 +513,7 @@ a {
   backface-visibility: hidden;
   will-change: opacity, transform;
   pointer-events: none;
+  margin-top: 90%;
 }
 .container .main .openspace .openspace__container .openspace__variation .openspace__cursor .white {
   width: 100%;
