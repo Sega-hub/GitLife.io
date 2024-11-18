@@ -1,4 +1,4 @@
-import "../css/style.css";
+// import "../css/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
     if (innerWidth > 1200) {
