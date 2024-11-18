@@ -108,18 +108,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let lastScrollTop = 0;
     const header = document.querySelector('.header');
+    const SCROLL_THRESHOLD = 50;
     
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const handleScroll = () => {
+        const scrollTop = window.scrollY;
+     
+        if (scrollTop > SCROLL_THRESHOLD) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     
-        if (scrollTop > lastScrollTop) {           
+     
+        if (scrollTop > lastScrollTop) {
             header.classList.add('hidden');
-        } else {            
+        } else {
             header.classList.remove('hidden');
         }
     
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
+        lastScrollTop = Math.max(0, scrollTop);
+    };
+    
+    window.addEventListener('scroll', () => requestAnimationFrame(handleScroll));
 
     if (mobLines.length > 0) {
         window.addEventListener("scroll", animOnScroll);

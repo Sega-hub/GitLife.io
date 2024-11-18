@@ -71,7 +71,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+  background: transparent;
   padding-bottom: 10px;
   transition: transform 0.3s ease-in-out;
   position: fixed;
@@ -79,6 +79,9 @@ a {
 }
 .container .header.hidden {
   transform: translateY(-100%);
+}
+.container .header.scrolled {
+  background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
 }
 .container .header .header__container {
   width: 80%;
@@ -2078,7 +2081,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+    background: transparent;
     padding-bottom: 10px;
     transition: transform 0.3s ease-in-out;
     position: fixed;
@@ -4117,7 +4120,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+    background: transparent;
     padding-bottom: 10px;
     transition: transform 0.3s ease-in-out;
     position: fixed;

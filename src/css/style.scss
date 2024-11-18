@@ -207,7 +207,7 @@ $width: 80%;
         width: 100vw;
         max-width: 100%;
         @include center();
-        background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+        background: transparent;
         padding-bottom: 10px;
         transition: transform 0.3s ease-in-out;
         position: fixed;
@@ -217,6 +217,9 @@ $width: 80%;
             transform: translateY(-100%);
         }
 
+        &.scrolled {
+            background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+        }
 
         .header__container {
             width: $width;
@@ -1835,7 +1838,7 @@ $width: 80%;
             width: 100vw;
             max-width: 100%;
             @include center();
-            background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+            background: transparent;
             padding-bottom: 10px;
             transition: transform 0.3s ease-in-out;
             position: fixed;
@@ -3530,7 +3533,7 @@ $width: 80%;
             width: 100vw;
             max-width: 100%;
             @include center();
-            background: linear-gradient(180deg, #000000 20.98%, rgba(0, 0, 0, 0) 100%);
+            background: transparent;
             padding-bottom: 10px;
             transition: transform 0.3s ease-in-out;
             position: fixed;
