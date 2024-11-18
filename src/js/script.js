@@ -99,27 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } 
 
-    } else if (innerWidth < 1100) {            
-        let lastScrollTop = 0;
-        const header = document.querySelector('.header');
-        
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-            if (scrollTop > lastScrollTop) {           
-                header.classList.add('hidden');
-            } else {            
-                header.classList.remove('hidden');
-            }
-        
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        });
-    }
+    } 
     
     const texts = document.querySelectorAll("#text");
     const hosting = document.querySelectorAll("#layer");
     const moves = document.querySelectorAll("#move");
     const mobLines = document.querySelectorAll(".anim");
+
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+        if (scrollTop > lastScrollTop) {           
+            header.classList.add('hidden');
+        } else {            
+            header.classList.remove('hidden');
+        }
+    
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
 
     if (mobLines.length > 0) {
         window.addEventListener("scroll", animOnScroll);

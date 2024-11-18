@@ -207,7 +207,17 @@ $width: 80%;
         width: 100vw;
         max-width: 100%;
         @include center();
-        background-color: rgb(1, 0, 44);
+        background-color: transparent;
+        padding-bottom: 10px;
+        transition: transform 0.3s ease-in-out;
+        position: fixed;
+        z-index: 1000;
+
+        &.hidden {
+            transform: translateY(-100%);
+        }
+
+
         .header__container {
             width: $width;
             display: flex;
